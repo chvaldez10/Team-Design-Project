@@ -1,0 +1,89 @@
+'''
+vidcap = cv2.VideoCapture(PATH_data_video)
+old_fps = int(vidcap.get(cv2.CAP_PROP_FPS) )
+print("Frames per second = {0}.".format( int(old_fps) ) )    
+frames_number = int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
+print("Number of frames = {0}.".format( int(frames_number) ) )
+
+# Set desired FPS = 1
+new_fps = 1
+step = int(old_fps / new_fps)    
+print('step = {0}.', format(step))
+'''
+
+# old FPS = 15, new FPS = 1. We need to select each 15th frame to read
+frames = 900 
+step = 15
+
+#frames_per_minute = frames/step # I decided it should be 900/15 = 60
+
+
+for day in days:      
+    PATH_data_day   = PATH_data_patient + day + '/'
+    PATH_frames_day = PATH_frames_patient + day + '/'
+        
+    
+    hours = []
+    for cur_path in os.listdir(PATH_data_day):
+        # check if current path is a file
+        if os.path.isdir(os.path.join(PATH_data_day, cur_path)):
+            hours.append(cur_path)
+    print(hours)
+    
+    
+    for hour in hours:
+        
+        create_folder (PATH_frames_tmp, overwrite=True)                
+        PATH_data_hour   = PATH_data_day + hour + '/'
+        
+        file_names = []
+        # Iterate directory
+        for cur_path in os.listdir(PATH_data_hour):
+            # check if current path is a file
+            if os.path.isfile(os.path.join(PATH_data_hour, cur_path)):
+                file_names.append(cur_path)
+        
+        file_names.sort()        
+        file_numbers = []
+        for i in (file_names):
+            file_numbers.append( int(re.findall(r'\d+',i)[0]) )
+                      
+        files = list(zip(file_numbers, file_names))
+        
+        print('hour is: ',hour)
+        print ('first minute is: ',min(file_numbers))  
+        #first_minute = min(file_numbers)
+        #minute = first_minute
+        #saved_count = first_minute + (saving_minute-1)*frames_per_minute
+        saved_count = 0 
+        
+        for file_number,file_name in files:
+            
+            #print('number = {}, name = {}'.format(file_number,file_name))
+            PATH_file_video = PATH_data_hour + file_name           
+            
+            vidcap = cv2.VideoCapture(PATH_file_video)
+            success,frame = vidcap.read()
+        
+            if not success:
+                print('Video {} was NOT found.'.format(PATH_file_video)) #?!
+            
+            # Cut video into frames
+            frame_count = 0           
+                    
+            while success:
+                name = "frame_%d.png" % saved_count
+                PATH_frame_save = os.path.join(PATH_frames_tmp , name)
+                #print(PATH_frame_save)
+                cv2.imwrite( PATH_frame_save, frame ) 
+                #print('Saved a new frame',saved_count,' (№', int(frame_count), 'original frame) ')
+        
+                frame_count += step # i.e. at 15 fps, this advances one second
+                vidcap.set(cv2.CAP_PROP_POS_FRAMES, frame_count)
+                success,frame = vidcap.read() 
+                 
+                
+                # do something ...
+                saved_count += 1 # we have saved and processed 1 frame out of video. Each 60 sec video has 900 frames, but we use only 60 of them.
+            
+            vidcap.release()
