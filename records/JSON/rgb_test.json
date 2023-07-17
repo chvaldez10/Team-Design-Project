@@ -10,6 +10,17 @@
     "old fps": 29.375330583687408,
     "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Hold Breath\\Arun2.mp4"
   },
+  "1": {
+    "ID": "Arun",
+    "distance": "2 Meters",
+    "blanket": "With Blankets",
+    "breathing": "Hold Breath",
+    "filename": "Arun2_2.mp4",
+    "frames": 1138.0,
+    "length": 38.59782,
+    "old fps": 29.483530417002825,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Hold Breath\\Arun2_2.mp4"
+  },
   "2": {
     "ID": "Arun",
     "distance": "2 Meters",
@@ -20,5 +31,82 @@
     "length": 7.703174999999999,
     "old fps": 18.563774028241603,
     "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Relaxed\\Arun2.mp4"
+  },
+  "3": {
+    "ID": "Arun",
+    "distance": "2 Meters",
+    "blanket": "With Blankets",
+    "breathing": "Relaxed",
+    "filename": "Arun2_2.mp4",
+    "frames": 1137.0,
+    "length": 38.190605,
+    "old fps": 29.77172003428592,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Relaxed\\Arun2_2.mp4"
+  },
+  "4": {
+    "ID": "Arun",
+    "distance": "2 Meters",
+    "blanket": "Without Blankets",
+    "breathing": "Hold Breath",
+    "filename": "short.mp4",
+    "frames": 1790.0,
+    "length": 36.113806000000004,
+    "old fps": 49.56553180797393,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Hold Breath\\short.mp4"
+  },
+  "5": {
+    "ID": "Arun",
+    "distance": "2 Meters",
+    "blanket": "Without Blankets",
+    "breathing": "Relaxed",
+    "filename": "relax 2meter short.mp4",
+    "frames": 3872.0,
+    "length": 72.04854,
+    "old fps": 53.74154701816303,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Relaxed\\relax 2meter short.mp4"
+  },
+  "6": {
+    "ID": "Arun",
+    "distance": "3 Meters",
+    "blanket": "With Blankets",
+    "breathing": "Hold Breath",
+    "filename": "Arun3.mp4",
+    "frames": 1340.0,
+    "length": 37.059608,
+    "old fps": 36.15796475774919,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\With Blankets\\Hold Breath\\Arun3.mp4"
+  },
+  "7": {
+    "ID": "Arun",
+    "distance": "3 Meters",
+    "blanket": "With Blankets",
+    "breathing": "Relaxed",
+    "filename": "Arun3.mp4",
+    "frames": 1398.0,
+    "length": 41.309832,
+    "old fps": 33.841822450403576,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\With Blankets\\Relaxed\\Arun3.mp4"
+  },
+  "8": {
+    "ID": "Arun",
+    "distance": "3 Meters",
+    "blanket": "Without Blankets",
+    "breathing": "Hold Breath",
+    "filename": "Arun3.mp4",
+    "frames": 1438.0,
+    "length": 25.961375999999998,
+    "old fps": 55.389976247792106,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\Without Blankets\\Hold Breath\\Arun3.mp4"
+  },
+  "9": {
+    "ID": "Arun",
+    "distance": "3 Meters",
+    "blanket": "Without Blankets",
+    "breathing": "Relaxed",
+    "filename": "Arun3.mp4",
+    "frames": 1470.0,
+    "length": 26.567759000000002,
+    "old fps": 55.330221867790954,
+    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\Without Blankets\\Relaxed\\Arun3.mp4"
   }
 }
