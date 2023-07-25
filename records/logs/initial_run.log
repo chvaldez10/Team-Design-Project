@@ -1,0 +1,206 @@
+
+Adjusting FPS to 10
+==================================================
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Hold Breath/frames_Arun2_lower_bound
+Picking frames: [0, 3, 6, 9, 12, 16, 19, 22, 25, 28] per set
+Expected number of frames: 740 (10FPS * 74s).
+
+Done in 92.12650810000002 seconds.
+
+Set counter: 74, save counter: 740, frame counter: 2146
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Hold Breath/frames_Arun2_2_lower_bound
+Picking frames: [0, 3, 6, 9, 12, 16, 19, 22, 25, 28] per set
+Expected number of frames: 390 (10FPS * 39s).
+
+Done in 47.8521758 seconds.
+
+Set counter: 39, save counter: 390, frame counter: 1131
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Relaxed/frames_Arun2_lower_bound
+Picking frames: [0, 2, 4, 6, 8, 9, 11, 13, 15, 17] per set
+Expected number of frames: 70 (10FPS * 7s).
+
+Done in 8.389888299999996 seconds.
+
+Set counter: 7, save counter: 70, frame counter: 126
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Relaxed/frames_Arun2_2_lower_bound
+Picking frames: [0, 3, 6, 9, 12, 16, 19, 22, 25, 28] per set
+Expected number of frames: 390 (10FPS * 39s).
+
+Done in 49.248280900000054 seconds.
+
+Set counter: 39, save counter: 390, frame counter: 1131
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/Without Blankets/Hold Breath/frames_short_lower_bound
+Picking frames: [0, 5, 11, 16, 21, 27, 32, 37, 43, 48] per set
+Expected number of frames: 360 (10FPS * 36s).
+
+Done in 47.2134059 seconds.
+
+Set counter: 36, save counter: 360, frame counter: 1764
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/Without Blankets/Relaxed/frames_relax 2meter short_lower_bound
+Picking frames: [0, 6, 12, 17, 23, 29, 35, 40, 46, 52] per set
+Expected number of frames: 730 (10FPS * 73s).
+
+Done in 93.58946930000002 seconds.
+
+Set counter: 73, save counter: 730, frame counter: 3869
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/With Blankets/Hold Breath/frames_Arun3_lower_bound
+Picking frames: [0, 4, 8, 12, 16, 19, 23, 27, 31, 35] per set
+Expected number of frames: 370 (10FPS * 37s).
+
+Done in 47.58745709999994 seconds.
+
+Set counter: 37, save counter: 370, frame counter: 1332
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/With Blankets/Relaxed/frames_Arun3_lower_bound
+Picking frames: [0, 4, 7, 11, 14, 18, 21, 25, 28, 32] per set
+Expected number of frames: 420 (10FPS * 42s).
+
+Done in 53.92055120000009 seconds.
+
+Set counter: 42, save counter: 420, frame counter: 1386
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/Without Blankets/Hold Breath/frames_Arun3_lower_bound
+Picking frames: [0, 6, 12, 18, 24, 30, 36, 42, 48, 54] per set
+Expected number of frames: 260 (10FPS * 26s).
+
+Done in 33.64926490000005 seconds.
+
+Set counter: 26, save counter: 260, frame counter: 1430
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/Without Blankets/Relaxed/frames_Arun3_lower_bound
+Picking frames: [0, 6, 12, 18, 24, 30, 36, 42, 48, 54] per set
+Expected number of frames: 260 (10FPS * 26s).
+
+Done in 34.01591660000008 seconds.
+
+Set counter: 26, save counter: 260, frame counter: 1430
+
+--------------------------------------------------
+
+Adjusting FPS to 20
+==================================================
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Hold Breath/frames_Arun2_upper_bound
+Picking frames: [0, 1, 27, 25, 24, 22, 21, 19, 18, 16, 15, 13, 12, 10, 9, 7, 6, 4, 3, 28] per set
+Expected number of frames: 1480 (20FPS * 74s).
+
+Done in 177.29904799999997 seconds.
+
+Set counter: 74, save counter: 1480, frame counter: 2146
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Hold Breath/frames_Arun2_2_upper_bound
+Picking frames: [0, 1, 27, 25, 24, 22, 21, 19, 18, 16, 15, 13, 12, 10, 9, 7, 6, 4, 3, 28] per set
+Expected number of frames: 780 (20FPS * 39s).
+
+Done in 94.74677149999991 seconds.
+
+Set counter: 39, save counter: 780, frame counter: 1131
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Relaxed/frames_Arun2_upper_bound
+Picking frames: [4, 13, 0, 10, 16, 15, 14, 12, 11, 9, 1, 8, 7, 6, 5, 3, 2, 17] per set
+Expected number of frames: 140 (20FPS * 7s).
+
+Done in 15.858289700000114 seconds.
+
+Set counter: 7, save counter: 140, frame counter: 126
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/Relaxed/frames_Arun2_2_upper_bound
+Picking frames: [0, 1, 27, 25, 24, 22, 21, 19, 18, 16, 15, 13, 12, 10, 9, 7, 6, 4, 3, 28] per set
+Expected number of frames: 780 (20FPS * 39s).
+
+Done in 97.29156450000005 seconds.
+
+Set counter: 39, save counter: 780, frame counter: 1131
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/Without Blankets/Hold Breath/frames_short_upper_bound
+Picking frames: [0, 3, 45, 43, 40, 38, 35, 33, 30, 28, 25, 23, 20, 18, 15, 13, 10, 8, 5, 48] per set
+Expected number of frames: 720 (20FPS * 36s).
+
+Done in 87.64475600000014 seconds.
+
+Set counter: 36, save counter: 720, frame counter: 1764
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/Without Blankets/Relaxed/frames_relax 2meter short_upper_bound
+Picking frames: [0, 3, 49, 47, 44, 41, 38, 36, 33, 30, 27, 25, 22, 19, 16, 14, 11, 8, 5, 52] per set
+Expected number of frames: 1460 (20FPS * 73s).
+
+Done in 175.7870117 seconds.
+
+Set counter: 73, save counter: 1460, frame counter: 3869
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/With Blankets/Hold Breath/frames_Arun3_upper_bound
+Picking frames: [0, 2, 33, 31, 29, 28, 26, 24, 22, 20, 18, 17, 15, 13, 11, 9, 7, 6, 4, 35] per set
+Expected number of frames: 740 (20FPS * 37s).
+
+Done in 90.58709609999983 seconds.
+
+Set counter: 37, save counter: 740, frame counter: 1332
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/With Blankets/Relaxed/frames_Arun3_upper_bound
+Picking frames: [0, 2, 30, 29, 27, 25, 24, 22, 20, 19, 17, 15, 13, 12, 10, 8, 7, 5, 3, 32] per set
+Expected number of frames: 840 (20FPS * 42s).
+
+Done in 102.79112139999984 seconds.
+
+Set counter: 42, save counter: 840, frame counter: 1386
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/Without Blankets/Hold Breath/frames_Arun3_upper_bound
+Picking frames: [0, 3, 51, 48, 45, 43, 40, 37, 34, 31, 28, 26, 23, 20, 17, 14, 11, 9, 6, 54] per set
+Expected number of frames: 520 (20FPS * 26s).
+
+Done in 65.56515330000002 seconds.
+
+Set counter: 26, save counter: 520, frame counter: 1430
+
+--------------------------------------------------
+
+Saving frames to: E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/3 Meters/Without Blankets/Relaxed/frames_Arun3_upper_bound
+Picking frames: [0, 3, 51, 48, 45, 43, 40, 37, 34, 31, 28, 26, 23, 20, 17, 14, 11, 9, 6, 54] per set
+Expected number of frames: 520 (20FPS * 26s).
+
+Done in 65.29459509999992 seconds.
+
+Set counter: 26, save counter: 520, frame counter: 1430
+
+--------------------------------------------------
