@@ -8,7 +8,7 @@
     "frames": 6450.0,
     "length": 215.0,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\H\\WOB\\1_H_WOB_2m.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\H\\WOB\\1_H_WOB_2m.avi"
   },
   "1": {
     "ID": "1",
@@ -19,7 +19,7 @@
     "frames": 2464.0,
     "length": 82.13333333333334,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\H\\WOB\\1_H_WOB_2m_2.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\H\\WOB\\1_H_WOB_2m_2.avi"
   },
   "2": {
     "ID": "1",
@@ -30,7 +30,7 @@
     "frames": 1867.0,
     "length": 62.233333333333334,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\R\\WOB\\1_R_WOB_2m.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//1\\2 meters\\R\\WOB\\1_R_WOB_2m.avi"
   },
   "3": {
     "ID": "10",
@@ -41,7 +41,7 @@
     "frames": 1813.0,
     "length": 181.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\H\\B\\10_holdingbreath_blanket_2me-12222022145955.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\H\\B\\10_holdingbreath_blanket_2me-12222022145955.avi"
   },
   "4": {
     "ID": "10",
@@ -52,7 +52,7 @@
     "frames": 1988.0,
     "length": 198.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\H\\WOB\\10_H_WOB_2m.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\H\\WOB\\10_H_WOB_2m.avi"
   },
   "5": {
     "ID": "10",
@@ -63,7 +63,7 @@
     "frames": 1855.0,
     "length": 185.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\R\\B\\10_relaxed_blanket_2me-12222022145805.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\R\\B\\10_relaxed_blanket_2me-12222022145805.avi"
   },
   "6": {
     "ID": "10",
@@ -74,7 +74,7 @@
     "frames": 2103.0,
     "length": 210.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\R\\WOB\\10_relaxed_withoutblanket_2me-12222022145402.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\2 meters\\R\\WOB\\10_relaxed_withoutblanket_2me-12222022145402.avi"
   },
   "7": {
     "ID": "10",
@@ -85,7 +85,7 @@
     "frames": 2006.0,
     "length": 200.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\H\\B\\10_holdingbreathing_blanket_3me-12222022144836.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\H\\B\\10_holdingbreathing_blanket_3me-12222022144836.avi"
   },
   "8": {
     "ID": "10",
@@ -96,7 +96,7 @@
     "frames": 1869.0,
     "length": 186.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\H\\WOB\\10_holdbreath_withoutblanket_3me-12222022144453.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\H\\WOB\\10_holdbreath_withoutblanket_3me-12222022144453.avi"
   },
   "9": {
     "ID": "10",
@@ -107,7 +107,7 @@
     "frames": 1821.0,
     "length": 182.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\R\\B\\10_relaxed_blanket_3me-12222022144649.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\R\\B\\10_relaxed_blanket_3me-12222022144649.avi"
   },
   "10": {
     "ID": "10",
@@ -118,7 +118,7 @@
     "frames": 1938.0,
     "length": 193.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\R\\WOB\\10_relaxed_withoutblanket_3me-12222022144300.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//10\\3 meters\\R\\WOB\\10_relaxed_withoutblanket_3me-12222022144300.avi"
   },
   "11": {
     "ID": "11",
@@ -129,7 +129,7 @@
     "frames": 1822.0,
     "length": 182.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\H\\B\\11_holdingbreath_blanket_2me-12222022150959.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\H\\B\\11_holdingbreath_blanket_2me-12222022150959.avi"
   },
   "12": {
     "ID": "11",
@@ -140,7 +140,7 @@
     "frames": 2009.0,
     "length": 200.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\H\\WOB\\11_holdbreathing_wob_2me-12222022150554.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\H\\WOB\\11_holdbreathing_wob_2me-12222022150554.avi"
   },
   "13": {
     "ID": "11",
@@ -151,7 +151,7 @@
     "frames": 1768.0,
     "length": 176.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\B\\11_relaxed_blanket_2me-12222022150811.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\B\\11_relaxed_blanket_2me-12222022150811.avi"
   },
   "14": {
     "ID": "11",
@@ -162,7 +162,7 @@
     "frames": 1759.0,
     "length": 175.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\WOB\\11_relaxed_wob_2me-12222022150232.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\WOB\\11_relaxed_wob_2me-12222022150232.avi"
   },
   "15": {
     "ID": "11",
@@ -173,7 +173,7 @@
     "frames": 1821.0,
     "length": 182.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\WOB\\11_relaxed_wob_2me-12222022150410.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\2 meters\\R\\WOB\\11_relaxed_wob_2me-12222022150410.avi"
   },
   "16": {
     "ID": "11",
@@ -184,7 +184,7 @@
     "frames": 1981.0,
     "length": 198.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\B\\11_holdbreathing_blanket_3me-12222022153145.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\B\\11_holdbreathing_blanket_3me-12222022153145.avi"
   },
   "17": {
     "ID": "11",
@@ -195,7 +195,7 @@
     "frames": 740.0,
     "length": 74.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\WOB\\11_holdbreathing_withoutblanket2_3me-12222022152746.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\WOB\\11_holdbreathing_withoutblanket2_3me-12222022152746.avi"
   },
   "18": {
     "ID": "11",
@@ -206,7 +206,7 @@
     "frames": 1129.0,
     "length": 112.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\WOB\\11_holdbreathing_withoutblanket_3me-12222022152654.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\H\\WOB\\11_holdbreathing_withoutblanket_3me-12222022152654.avi"
   },
   "19": {
     "ID": "11",
@@ -217,7 +217,7 @@
     "frames": 2130.0,
     "length": 213.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\R\\B\\11_relaxedd_blanket_3me-12222022152948.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\R\\B\\11_relaxedd_blanket_3me-12222022152948.avi"
   },
   "20": {
     "ID": "11",
@@ -228,7 +228,7 @@
     "frames": 1932.0,
     "length": 193.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\R\\WOB\\11_relaxed_withoutblanket_3me-12222022152505.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//11\\3 meters\\R\\WOB\\11_relaxed_withoutblanket_3me-12222022152505.avi"
   },
   "21": {
     "ID": "12",
@@ -239,7 +239,7 @@
     "frames": 1925.0,
     "length": 192.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\H\\B\\12_holdingbreath_blanket_2me-12222022151756.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\H\\B\\12_holdingbreath_blanket_2me-12222022151756.avi"
   },
   "22": {
     "ID": "12",
@@ -250,7 +250,7 @@
     "frames": 1951.0,
     "length": 195.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\H\\WOB\\12_holdbreathing_withoutblanket_2me-12222022151409.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\H\\WOB\\12_holdbreathing_withoutblanket_2me-12222022151409.avi"
   },
   "23": {
     "ID": "12",
@@ -261,7 +261,7 @@
     "frames": 1957.0,
     "length": 195.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\R\\B\\12_relaxed_blanket_2me-12222022151611.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\R\\B\\12_relaxed_blanket_2me-12222022151611.avi"
   },
   "24": {
     "ID": "12",
@@ -272,7 +272,7 @@
     "frames": 1889.0,
     "length": 188.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\R\\WOB\\12_relaxed_withoutblanket_2me-12222022151224.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\2 meters\\R\\WOB\\12_relaxed_withoutblanket_2me-12222022151224.avi"
   },
   "25": {
     "ID": "12",
@@ -283,7 +283,7 @@
     "frames": 2059.0,
     "length": 205.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\H\\B\\12_holdingbreath_blanket_3me-12222022153923.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\H\\B\\12_holdingbreath_blanket_3me-12222022153923.avi"
   },
   "26": {
     "ID": "12",
@@ -294,7 +294,7 @@
     "frames": 1910.0,
     "length": 191.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\H\\WOB\\12_holdbreathing_wob_3me-12222022153552.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\H\\WOB\\12_holdbreathing_wob_3me-12222022153552.avi"
   },
   "27": {
     "ID": "12",
@@ -305,7 +305,7 @@
     "frames": 2031.0,
     "length": 203.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\R\\B\\12_relaxed_blanket_3me-12222022153739.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\R\\B\\12_relaxed_blanket_3me-12222022153739.avi"
   },
   "28": {
     "ID": "12",
@@ -316,7 +316,7 @@
     "frames": 1907.0,
     "length": 190.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\R\\WOB\\12_relaxed_wob_3me-12222022153404.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//12\\3 meters\\R\\WOB\\12_relaxed_wob_3me-12222022153404.avi"
   },
   "29": {
     "ID": "13",
@@ -327,7 +327,7 @@
     "frames": 1985.0,
     "length": 198.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\H\\B\\13_holdbreathing_blanket_2me-12222022160101.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\H\\B\\13_holdbreathing_blanket_2me-12222022160101.avi"
   },
   "30": {
     "ID": "13",
@@ -338,7 +338,7 @@
     "frames": 2589.0,
     "length": 258.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\H\\WOB\\13_holdingbreath_withoutblanket_2me-12222022155708.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\H\\WOB\\13_holdingbreath_withoutblanket_2me-12222022155708.avi"
   },
   "31": {
     "ID": "13",
@@ -349,7 +349,7 @@
     "frames": 2011.0,
     "length": 201.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\R\\B\\13_relaxed_blanket_2me-12222022155919.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\R\\B\\13_relaxed_blanket_2me-12222022155919.avi"
   },
   "32": {
     "ID": "13",
@@ -360,7 +360,7 @@
     "frames": 2112.0,
     "length": 211.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\R\\WOB\\13_relaxed_withoutblanket_2me-12222022155522.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\2 meters\\R\\WOB\\13_relaxed_withoutblanket_2me-12222022155522.avi"
   },
   "33": {
     "ID": "13",
@@ -371,7 +371,7 @@
     "frames": 2075.0,
     "length": 207.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\H\\B\\13_holdbreath_blanket_3me-12222022155045.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\H\\B\\13_holdbreath_blanket_3me-12222022155045.avi"
   },
   "34": {
     "ID": "13",
@@ -382,7 +382,7 @@
     "frames": 2077.0,
     "length": 207.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\H\\WOB\\13_holdbreathing_wob_3me-12222022154705.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\H\\WOB\\13_holdbreathing_wob_3me-12222022154705.avi"
   },
   "35": {
     "ID": "13",
@@ -393,7 +393,7 @@
     "frames": 2025.0,
     "length": 202.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\R\\B\\13_relaxed_blanket_3me-12222022154853.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\R\\B\\13_relaxed_blanket_3me-12222022154853.avi"
   },
   "36": {
     "ID": "13",
@@ -404,7 +404,7 @@
     "frames": 2075.0,
     "length": 207.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\R\\WOB\\13_relaxed_wob_3me-12222022154509.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//13\\3 meters\\R\\WOB\\13_relaxed_wob_3me-12222022154509.avi"
   },
   "37": {
     "ID": "14",
@@ -415,7 +415,7 @@
     "frames": 2255.0,
     "length": 225.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//14\\14_1\\2 meters\\R\\14_relaxed_blanked_2me-12222022162724.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//14\\14_1\\2 meters\\R\\14_relaxed_blanked_2me-12222022162724.avi"
   },
   "38": {
     "ID": "14",
@@ -426,7 +426,7 @@
     "frames": 2310.0,
     "length": 231.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//14\\14_1\\2 meters\\R\\14_relaxed_wob_2me-12222022162257.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//14\\14_1\\2 meters\\R\\14_relaxed_wob_2me-12222022162257.avi"
   },
   "39": {
     "ID": "14",
@@ -437,7 +437,7 @@
     "frames": 1930.0,
     "length": 193.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\B\\14_holdbreathing_blanked_2me-12222022162951.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\B\\14_holdbreathing_blanked_2me-12222022162951.avi"
   },
   "40": {
     "ID": "14",
@@ -448,7 +448,7 @@
     "frames": 205.0,
     "length": 20.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\WOB\\14_holdbreathing2_wob_2me-12222022162548.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\WOB\\14_holdbreathing2_wob_2me-12222022162548.avi"
   },
   "41": {
     "ID": "14",
@@ -459,9 +459,20 @@
     "frames": 1296.0,
     "length": 129.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\WOB\\14_holdbreathing_wob_2me-12222022162453.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//14\\2 meters\\H\\WOB\\14_holdbreathing_wob_2me-12222022162453.avi"
   },
   "42": {
+    "ID": "15",
+    "distance": "15_2",
+    "blanket": "15_2nd_hold_blanket_2meters",
+    "breathing": "15_2nd_2meters",
+    "filename": "output_video.mp4",
+    "frames": 2114.0,
+    "length": 70.46666666666667,
+    "old fps": 30.0,
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\15_2\\15_2nd_2meters\\15_2nd_hold_blanket_2meters\\output_video.mp4"
+  },
+  "43": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -470,9 +481,9 @@
     "frames": 127.0,
     "length": 12.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092537.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092537.avi"
   },
-  "43": {
+  "44": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -481,9 +492,9 @@
     "frames": 160.0,
     "length": 16.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092548.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092548.avi"
   },
-  "44": {
+  "45": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -492,9 +503,9 @@
     "frames": 1.0,
     "length": 0.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092600.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092600.avi"
   },
-  "45": {
+  "46": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -503,9 +514,9 @@
     "frames": 29.0,
     "length": 2.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092720-0000.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092720-0000.avi"
   },
-  "46": {
+  "47": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -514,9 +525,9 @@
     "frames": 25.0,
     "length": 2.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092843-0000.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092843-0000.avi"
   },
-  "47": {
+  "48": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -525,9 +536,9 @@
     "frames": 50.0,
     "length": 5.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092857-0000.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092857-0000.avi"
   },
-  "48": {
+  "49": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -536,9 +547,9 @@
     "frames": 32.0,
     "length": 3.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092924-0000.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\B\\15_holdingbreath_blanket_2me-12232022092924-0000.avi"
   },
-  "49": {
+  "50": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -547,9 +558,9 @@
     "frames": 114.0,
     "length": 11.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090750.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090750.avi"
   },
-  "50": {
+  "51": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -558,9 +569,9 @@
     "frames": 14.0,
     "length": 2.8,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090832.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090832.avi"
   },
-  "51": {
+  "52": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -569,9 +580,9 @@
     "frames": 1.0,
     "length": 0.2,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090914.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_holdbreath_wob_2meters-12232022090914.avi"
   },
-  "52": {
+  "53": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -580,9 +591,9 @@
     "frames": 64.0,
     "length": 6.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_test_wob_2meters-12232022090012.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_test_wob_2meters-12232022090012.avi"
   },
-  "53": {
+  "54": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -591,9 +602,9 @@
     "frames": 176.0,
     "length": 17.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_test_wob_2meters-12232022090456.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\H\\WOB\\15_test_wob_2meters-12232022090456.avi"
   },
-  "54": {
+  "55": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -602,9 +613,9 @@
     "frames": 27.0,
     "length": 2.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022091943.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022091943.avi"
   },
-  "55": {
+  "56": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -613,9 +624,9 @@
     "frames": 66.0,
     "length": 6.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092035.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092035.avi"
   },
-  "56": {
+  "57": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -624,9 +635,9 @@
     "frames": 543.0,
     "length": 54.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092305.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092305.avi"
   },
-  "57": {
+  "58": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "B",
@@ -635,9 +646,9 @@
     "frames": 633.0,
     "length": 63.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092332.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\B\\15_relaxed_blanket_2me-12232022092332.avi"
   },
-  "58": {
+  "59": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -646,9 +657,9 @@
     "frames": 995.0,
     "length": 99.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085117.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085117.avi"
   },
-  "59": {
+  "60": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -657,9 +668,9 @@
     "frames": 1.0,
     "length": 0.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085205.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085205.avi"
   },
-  "60": {
+  "61": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -668,9 +679,9 @@
     "frames": 105.0,
     "length": 10.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085212.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085212.avi"
   },
-  "61": {
+  "62": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -679,9 +690,9 @@
     "frames": 56.0,
     "length": 5.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085224.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085224.avi"
   },
-  "62": {
+  "63": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -690,9 +701,9 @@
     "frames": 206.0,
     "length": 20.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085242.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085242.avi"
   },
-  "63": {
+  "64": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -701,9 +712,9 @@
     "frames": 391.0,
     "length": 78.2,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085306.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085306.avi"
   },
-  "64": {
+  "65": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -712,9 +723,9 @@
     "frames": 28.0,
     "length": 5.6,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085332.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085332.avi"
   },
-  "65": {
+  "66": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -723,9 +734,9 @@
     "frames": 77.0,
     "length": 15.4,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085344.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085344.avi"
   },
-  "66": {
+  "67": {
     "ID": "15",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -734,9 +745,9 @@
     "frames": 92.0,
     "length": 18.4,
     "old fps": 5.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085400.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//15\\2 meters\\R\\WOB\\15_relaxed_wob_2meters-12232022085400.avi"
   },
-  "67": {
+  "68": {
     "ID": "2",
     "distance": "2 meters",
     "blanket": "B",
@@ -745,9 +756,9 @@
     "frames": 4567.0,
     "length": 152.23333333333332,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\H\\B\\2_H_B_2m-12222022100256.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\H\\B\\2_H_B_2m-12222022100256.avi"
   },
-  "68": {
+  "69": {
     "ID": "2",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -756,9 +767,9 @@
     "frames": 4466.0,
     "length": 148.86666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\H\\WOB\\2_H_WOB_2m-12222022095411.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\H\\WOB\\2_H_WOB_2m-12222022095411.avi"
   },
-  "69": {
+  "70": {
     "ID": "2",
     "distance": "2 meters",
     "blanket": "B",
@@ -767,9 +778,9 @@
     "frames": 4691.0,
     "length": 156.36666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\R\\B\\2_R_B_2m-12222022095917.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\R\\B\\2_R_B_2m-12222022095917.avi"
   },
-  "70": {
+  "71": {
     "ID": "2",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -778,9 +789,9 @@
     "frames": 4344.0,
     "length": 144.8,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\R\\WOB\\2_R_WOB_2m-12222022095034.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\2 meters\\R\\WOB\\2_R_WOB_2m-12222022095034.avi"
   },
-  "71": {
+  "72": {
     "ID": "2",
     "distance": "3 meters",
     "blanket": "B",
@@ -789,9 +800,9 @@
     "frames": 3992.0,
     "length": 133.06666666666666,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\H\\B\\2_H_B_3m-12222022102602.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\H\\B\\2_H_B_3m-12222022102602.avi"
   },
-  "72": {
+  "73": {
     "ID": "2",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -800,9 +811,9 @@
     "frames": 3952.0,
     "length": 131.73333333333332,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\H\\WOB\\2_H_WOB_3m-12222022101944.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\H\\WOB\\2_H_WOB_3m-12222022101944.avi"
   },
-  "73": {
+  "74": {
     "ID": "2",
     "distance": "3 meters",
     "blanket": "B",
@@ -811,9 +822,9 @@
     "frames": 3834.0,
     "length": 127.8,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\B\\2_R_B_3m-12222022102314.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\B\\2_R_B_3m-12222022102314.avi"
   },
-  "74": {
+  "75": {
     "ID": "2",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -822,9 +833,9 @@
     "frames": 656.0,
     "length": 21.866666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\WOB\\2_R_WOB_3m-12222022101525.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\WOB\\2_R_WOB_3m-12222022101525.avi"
   },
-  "75": {
+  "76": {
     "ID": "2",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -833,9 +844,9 @@
     "frames": 3880.0,
     "length": 129.33333333333334,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\WOB\\2_R_WOB_3m-12222022101644.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//2\\3 meters\\R\\WOB\\2_R_WOB_3m-12222022101644.avi"
   },
-  "76": {
+  "77": {
     "ID": "3",
     "distance": "3 meters",
     "blanket": "B",
@@ -844,9 +855,9 @@
     "frames": 3295.0,
     "length": 109.83333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\H\\B\\3_HB_B_3m-12222022103839.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\H\\B\\3_HB_B_3m-12222022103839.avi"
   },
-  "77": {
+  "78": {
     "ID": "3",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -855,9 +866,9 @@
     "frames": 3921.0,
     "length": 130.7,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\H\\WOB\\3_HB_WOB_3METERS-12222022104233.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\H\\WOB\\3_HB_WOB_3METERS-12222022104233.avi"
   },
-  "78": {
+  "79": {
     "ID": "3",
     "distance": "3 meters",
     "blanket": "B",
@@ -866,9 +877,9 @@
     "frames": 4064.0,
     "length": 135.46666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\R\\B\\3_R_B_3METERS-12222022103546.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\R\\B\\3_R_B_3METERS-12222022103546.avi"
   },
-  "79": {
+  "80": {
     "ID": "3",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -877,9 +888,9 @@
     "frames": 3949.0,
     "length": 131.63333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\R\\WOB\\3_R_WOB_3m-12222022103229.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//3\\3 meters\\R\\WOB\\3_R_WOB_3m-12222022103229.avi"
   },
-  "80": {
+  "81": {
     "ID": "4",
     "distance": "2 meters",
     "blanket": "B",
@@ -888,9 +899,9 @@
     "frames": 0.0,
     "length": 0.0,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\B\\4_b_holdbreath_2METERS-12222022113635.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\B\\4_b_holdbreath_2METERS-12222022113635.avi"
   },
-  "81": {
+  "82": {
     "ID": "4",
     "distance": "2 meters",
     "blanket": "B",
@@ -899,9 +910,9 @@
     "frames": 4756.0,
     "length": 158.53333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\B\\4_b_holdbreath_2METERS-12222022113645.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\B\\4_b_holdbreath_2METERS-12222022113645.avi"
   },
-  "82": {
+  "83": {
     "ID": "4",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -910,9 +921,9 @@
     "frames": 2626.0,
     "length": 87.53333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\WOB\\4_wob_HoldBreath_2METERS-12222022112005-12222022112746.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\H\\WOB\\4_wob_HoldBreath_2METERS-12222022112005-12222022112746.avi"
   },
-  "83": {
+  "84": {
     "ID": "4",
     "distance": "2 meters",
     "blanket": "B",
@@ -921,9 +932,9 @@
     "frames": 3821.0,
     "length": 127.36666666666666,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\R\\B\\4_b_relaxed_2METERS-12222022113126.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\R\\B\\4_b_relaxed_2METERS-12222022113126.avi"
   },
-  "84": {
+  "85": {
     "ID": "4",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -932,9 +943,9 @@
     "frames": 4594.0,
     "length": 153.13333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\R\\WOB\\4_wob_relaxed_2METERS-12222022112005-12222022112340.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\2 meters\\R\\WOB\\4_wob_relaxed_2METERS-12222022112005-12222022112340.avi"
   },
-  "85": {
+  "86": {
     "ID": "4",
     "distance": "3 meters",
     "blanket": "B",
@@ -943,9 +954,9 @@
     "frames": 4683.0,
     "length": 156.1,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\H\\B\\4_holdbreth_blanket_3ME-12222022115812.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\H\\B\\4_holdbreth_blanket_3ME-12222022115812.avi"
   },
-  "86": {
+  "87": {
     "ID": "4",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -954,9 +965,9 @@
     "frames": 3855.0,
     "length": 128.5,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\H\\WOB\\4_holdbreathing_wob_3ME-12222022115105.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\H\\WOB\\4_holdbreathing_wob_3ME-12222022115105.avi"
   },
-  "87": {
+  "88": {
     "ID": "4",
     "distance": "3 meters",
     "blanket": "B",
@@ -965,9 +976,9 @@
     "frames": 3871.0,
     "length": 129.03333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\B\\4_relaxed_b_3ME-12222022115452.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\B\\4_relaxed_b_3ME-12222022115452.avi"
   },
-  "88": {
+  "89": {
     "ID": "4",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -976,9 +987,9 @@
     "frames": 124.0,
     "length": 4.133292,
     "old fps": 30.00030000300003,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\WOB\\4_relaxed_wob_3ME-12222022114801-0000.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\WOB\\4_relaxed_wob_3ME-12222022114801-0000.avi"
   },
-  "89": {
+  "90": {
     "ID": "4",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -987,9 +998,9 @@
     "frames": 3497.0,
     "length": 116.56666666666666,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\WOB\\4_relaxed_wob_3ME-12222022114811.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//4\\3 meters\\R\\WOB\\4_relaxed_wob_3ME-12222022114811.avi"
   },
-  "90": {
+  "91": {
     "ID": "5",
     "distance": "2 meters",
     "blanket": "B",
@@ -998,9 +1009,9 @@
     "frames": 3579.0,
     "length": 357.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\H\\B\\5_holdbreath_blanked_2me-12222022134041.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\H\\B\\5_holdbreath_blanked_2me-12222022134041.avi"
   },
-  "91": {
+  "92": {
     "ID": "5",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1009,9 +1020,9 @@
     "frames": 3471.0,
     "length": 347.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\H\\WOB\\5_holdbreath_wob_2me-12222022133505.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\H\\WOB\\5_holdbreath_wob_2me-12222022133505.avi"
   },
-  "92": {
+  "93": {
     "ID": "5",
     "distance": "2 meters",
     "blanket": "B",
@@ -1020,9 +1031,9 @@
     "frames": 4450.0,
     "length": 445.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\R\\B\\5_relaxed_blamked_2me-12222022133744.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\R\\B\\5_relaxed_blamked_2me-12222022133744.avi"
   },
-  "93": {
+  "94": {
     "ID": "5",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1031,9 +1042,9 @@
     "frames": 3554.0,
     "length": 355.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\R\\WOB\\5_relaxed_wob_2me-12222022133228.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\2 meters\\R\\WOB\\5_relaxed_wob_2me-12222022133228.avi"
   },
-  "94": {
+  "95": {
     "ID": "5",
     "distance": "3 meters",
     "blanket": "B",
@@ -1042,9 +1053,9 @@
     "frames": 4079.0,
     "length": 135.96666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\H\\B\\5_holdbrething_blanket_3ME-12222022121630.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\H\\B\\5_holdbrething_blanket_3ME-12222022121630.avi"
   },
-  "95": {
+  "96": {
     "ID": "5",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1053,9 +1064,9 @@
     "frames": 4041.0,
     "length": 134.7,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\H\\WOB\\5_holding_wob_3ME-12222022120954.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\H\\WOB\\5_holding_wob_3ME-12222022120954.avi"
   },
-  "96": {
+  "97": {
     "ID": "5",
     "distance": "3 meters",
     "blanket": "B",
@@ -1064,9 +1075,9 @@
     "frames": 4026.0,
     "length": 134.2,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\R\\B\\5_relax_blanket_3ME-12222022121330.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\R\\B\\5_relax_blanket_3ME-12222022121330.avi"
   },
-  "97": {
+  "98": {
     "ID": "5",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1075,9 +1086,9 @@
     "frames": 3556.0,
     "length": 118.53333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\R\\WOB\\5_relaxed_wob_3ME-12222022120703.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//5\\3 meters\\R\\WOB\\5_relaxed_wob_3ME-12222022120703.avi"
   },
-  "98": {
+  "99": {
     "ID": "6",
     "distance": "2 meters",
     "blanket": "B",
@@ -1086,9 +1097,9 @@
     "frames": 2186.0,
     "length": 218.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\H\\B\\6_holding_blanket_2me-12222022161854.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\H\\B\\6_holding_blanket_2me-12222022161854.avi"
   },
-  "99": {
+  "100": {
     "ID": "6",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1097,9 +1108,9 @@
     "frames": 2214.0,
     "length": 221.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\H\\WOB\\6_holdingbbreath_wob_2me-12222022161254.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\H\\WOB\\6_holdingbbreath_wob_2me-12222022161254.avi"
   },
-  "100": {
+  "101": {
     "ID": "6",
     "distance": "2 meters",
     "blanket": "B",
@@ -1108,9 +1119,9 @@
     "frames": 2566.0,
     "length": 256.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\R\\B\\6_relax_blanket_2me-12222022161616.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\R\\B\\6_relax_blanket_2me-12222022161616.avi"
   },
-  "101": {
+  "102": {
     "ID": "6",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1119,9 +1130,9 @@
     "frames": 2438.0,
     "length": 243.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\R\\WOB\\6_relaxed_wob_2me-12222022161005.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\2 meters\\R\\WOB\\6_relaxed_wob_2me-12222022161005.avi"
   },
-  "102": {
+  "103": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "B",
@@ -1130,9 +1141,9 @@
     "frames": 4844.0,
     "length": 484.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanketvairable2_3ME_-12222022125229.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanketvairable2_3ME_-12222022125229.avi"
   },
-  "103": {
+  "104": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "B",
@@ -1141,9 +1152,9 @@
     "frames": 1452.0,
     "length": 145.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanket_3ME-12222022124654.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanket_3ME-12222022124654.avi"
   },
-  "104": {
+  "105": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "B",
@@ -1152,9 +1163,9 @@
     "frames": 3246.0,
     "length": 324.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanket_3ME_x2-12222022124816.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\B\\6_holdbreath_blanket_3ME_x2-12222022124816.avi"
   },
-  "105": {
+  "106": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1163,9 +1174,9 @@
     "frames": 2703.0,
     "length": 90.1,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath2_WOB_3ME-12222022123516.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath2_WOB_3ME-12222022123516.avi"
   },
-  "106": {
+  "107": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1174,9 +1185,9 @@
     "frames": 1538.0,
     "length": 51.266666666666666,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath_WOB_3ME-12222022122738.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath_WOB_3ME-12222022122738.avi"
   },
-  "107": {
+  "108": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1185,9 +1196,9 @@
     "frames": 1423.0,
     "length": 47.43333333333333,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath_WOB_3ME-12222022122914.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\H\\WOB\\6_heldbreath_WOB_3ME-12222022122914.avi"
   },
-  "108": {
+  "109": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "B",
@@ -1196,9 +1207,9 @@
     "frames": 3910.0,
     "length": 391.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\R\\B\\6_relaxed_blanket_3ME-12222022124350.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\R\\B\\6_relaxed_blanket_3ME-12222022124350.avi"
   },
-  "109": {
+  "110": {
     "ID": "6",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1207,9 +1218,9 @@
     "frames": 3710.0,
     "length": 123.66666666666667,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\R\\WOB\\6_relaxed_WOB_3ME-12222022122444.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//6\\3 meters\\R\\WOB\\6_relaxed_WOB_3ME-12222022122444.avi"
   },
-  "110": {
+  "111": {
     "ID": "7",
     "distance": "2 meters",
     "blanket": "B",
@@ -1218,9 +1229,9 @@
     "frames": 3585.0,
     "length": 358.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\H\\B\\7_holdbreathing_blankets_2me-12222022132801.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\H\\B\\7_holdbreathing_blankets_2me-12222022132801.avi"
   },
-  "111": {
+  "112": {
     "ID": "7",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1229,9 +1240,9 @@
     "frames": 3453.0,
     "length": 345.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\H\\WOB\\7_holdbreath_wob_2me-12222022132145.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\H\\WOB\\7_holdbreath_wob_2me-12222022132145.avi"
   },
-  "112": {
+  "113": {
     "ID": "7",
     "distance": "2 meters",
     "blanket": "B",
@@ -1240,9 +1251,9 @@
     "frames": 5048.0,
     "length": 504.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\R\\B\\7_relaxed_blankets_2me-12222022132436.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\R\\B\\7_relaxed_blankets_2me-12222022132436.avi"
   },
-  "113": {
+  "114": {
     "ID": "7",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1251,9 +1262,9 @@
     "frames": 2593.0,
     "length": 86.43333333333334,
     "old fps": 30.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\R\\WOB\\7_relax_wob_2me-12222022131934.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\2 meters\\R\\WOB\\7_relax_wob_2me-12222022131934.avi"
   },
-  "114": {
+  "115": {
     "ID": "7",
     "distance": "3 meters",
     "blanket": "B",
@@ -1262,9 +1273,9 @@
     "frames": 3611.0,
     "length": 361.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\H\\B\\7_holdbreathing_blanket_3ME_-12222022131008.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\H\\B\\7_holdbreathing_blanket_3ME_-12222022131008.avi"
   },
-  "115": {
+  "116": {
     "ID": "7",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1273,9 +1284,9 @@
     "frames": 3599.0,
     "length": 359.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\H\\WOB\\7_holdbreathing_WOB_3ME_-12222022130357.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\H\\WOB\\7_holdbreathing_WOB_3ME_-12222022130357.avi"
   },
-  "116": {
+  "117": {
     "ID": "7",
     "distance": "3 meters",
     "blanket": "B",
@@ -1284,9 +1295,9 @@
     "frames": 3946.0,
     "length": 394.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\R\\B\\7_relaxed_blanket_3ME_-12222022130717.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\R\\B\\7_relaxed_blanket_3ME_-12222022130717.avi"
   },
-  "117": {
+  "118": {
     "ID": "7",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1295,9 +1306,9 @@
     "frames": 3438.0,
     "length": 343.8,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\R\\WOB\\7_relax_WOB_3ME_-12222022130055.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//7\\3 meters\\R\\WOB\\7_relax_WOB_3ME_-12222022130055.avi"
   },
-  "118": {
+  "119": {
     "ID": "8",
     "distance": "2 meters",
     "blanket": "B",
@@ -1306,9 +1317,9 @@
     "frames": 3544.0,
     "length": 354.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\B\\8_holdbreathing_blanket_2me-12222022135956.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\B\\8_holdbreathing_blanket_2me-12222022135956.avi"
   },
-  "119": {
+  "120": {
     "ID": "8",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1317,9 +1328,9 @@
     "frames": 3551.0,
     "length": 355.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\WOB\\8_holdbreath_withoutblanked_2me-12222022135120.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\WOB\\8_holdbreath_withoutblanked_2me-12222022135120.avi"
   },
-  "120": {
+  "121": {
     "ID": "8",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1328,9 +1339,9 @@
     "frames": 3741.0,
     "length": 374.1,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\WOB\\8_holdbreath_withoutblanked_2me-12222022135413.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\H\\WOB\\8_holdbreath_withoutblanked_2me-12222022135413.avi"
   },
-  "121": {
+  "122": {
     "ID": "8",
     "distance": "2 meters",
     "blanket": "B",
@@ -1339,9 +1350,9 @@
     "frames": 3553.0,
     "length": 355.3,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\R\\B\\8_relaxed_blanked_2me-12222022134840.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\R\\B\\8_relaxed_blanked_2me-12222022134840.avi"
   },
-  "122": {
+  "123": {
     "ID": "8",
     "distance": "2 meters",
     "blanket": "B",
@@ -1350,9 +1361,9 @@
     "frames": 3550.0,
     "length": 355.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\R\\B\\8_relaxed_blanket_2me-12222022135727.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\2 meters\\R\\B\\8_relaxed_blanket_2me-12222022135727.avi"
   },
-  "123": {
+  "124": {
     "ID": "8",
     "distance": "3 meters",
     "blanket": "B",
@@ -1361,9 +1372,9 @@
     "frames": 1917.0,
     "length": 191.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\H\\B\\8_holdbreathin_blanked_3me-12222022142640.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\H\\B\\8_holdbreathin_blanked_3me-12222022142640.avi"
   },
-  "124": {
+  "125": {
     "ID": "8",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1372,9 +1383,9 @@
     "frames": 3706.0,
     "length": 370.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\H\\WOB\\8_holdbreathing_withoutblanked_3me-12222022142104.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\H\\WOB\\8_holdbreathing_withoutblanked_3me-12222022142104.avi"
   },
-  "125": {
+  "126": {
     "ID": "8",
     "distance": "3 meters",
     "blanket": "B",
@@ -1383,9 +1394,9 @@
     "frames": 1935.0,
     "length": 193.5,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\R\\B\\8_relaxed_blanked_3me-12222022142425.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\R\\B\\8_relaxed_blanked_3me-12222022142425.avi"
   },
-  "126": {
+  "127": {
     "ID": "8",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1394,9 +1405,9 @@
     "frames": 3569.0,
     "length": 356.9,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\R\\WOB\\8_relaxed_withoutblanked_3me-12222022141804.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//8\\3 meters\\R\\WOB\\8_relaxed_withoutblanked_3me-12222022141804.avi"
   },
-  "127": {
+  "128": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "B",
@@ -1405,9 +1416,9 @@
     "frames": 3380.0,
     "length": 338.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\H\\B\\9_holdbreathing_blanked_2me-12222022141159.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\H\\B\\9_holdbreathing_blanked_2me-12222022141159.avi"
   },
-  "128": {
+  "129": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1416,9 +1427,9 @@
     "frames": 3570.0,
     "length": 357.0,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\H\\WOB\\9_holdbreath_wob2_2me-12222022140630.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\H\\WOB\\9_holdbreath_wob2_2me-12222022140630.avi"
   },
-  "129": {
+  "130": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "B",
@@ -1427,9 +1438,9 @@
     "frames": 1654.0,
     "length": 165.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\B\\9_relaxedh_blanked2_2me-12222022141019.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\B\\9_relaxedh_blanked2_2me-12222022141019.avi"
   },
-  "130": {
+  "131": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "B",
@@ -1438,9 +1449,9 @@
     "frames": 1487.0,
     "length": 148.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\B\\9_relaxedh_blanked_2me-12222022140919.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\B\\9_relaxedh_blanked_2me-12222022140919.avi"
   },
-  "131": {
+  "132": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1449,9 +1460,9 @@
     "frames": 1546.0,
     "length": 154.6,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\WOB\\9_relaxed_wob2_2me-12222022140457.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\WOB\\9_relaxed_wob2_2me-12222022140457.avi"
   },
-  "132": {
+  "133": {
     "ID": "9",
     "distance": "2 meters",
     "blanket": "WOB",
@@ -1460,9 +1471,9 @@
     "frames": 1752.0,
     "length": 175.2,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\WOB\\9_relaxed_wob_2me-12222022140345.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\2 meters\\R\\WOB\\9_relaxed_wob_2me-12222022140345.avi"
   },
-  "133": {
+  "134": {
     "ID": "9",
     "distance": "3 meters",
     "blanket": "B",
@@ -1471,9 +1482,9 @@
     "frames": 1784.0,
     "length": 178.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\H\\B\\9_holdbreathing_blanket_3me-12222022143501.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\H\\B\\9_holdbreathing_blanket_3me-12222022143501.avi"
   },
-  "134": {
+  "135": {
     "ID": "9",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1482,9 +1493,9 @@
     "frames": 1944.0,
     "length": 194.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\H\\WOB\\9_holdbreathing_wob_3me-12222022143053.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\H\\WOB\\9_holdbreathing_wob_3me-12222022143053.avi"
   },
-  "135": {
+  "136": {
     "ID": "9",
     "distance": "3 meters",
     "blanket": "B",
@@ -1493,9 +1504,9 @@
     "frames": 1937.0,
     "length": 193.7,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\R\\B\\9_relaxed_blanket_3me-12222022143308.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\R\\B\\9_relaxed_blanket_3me-12222022143308.avi"
   },
-  "136": {
+  "137": {
     "ID": "9",
     "distance": "3 meters",
     "blanket": "WOB",
@@ -1504,6 +1515,6 @@
     "frames": 1814.0,
     "length": 181.4,
     "old fps": 10.0,
-    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\R\\WOB\\9_relaxed_wob_3me-12222022142904.avi"
+    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR//9\\3 meters\\R\\WOB\\9_relaxed_wob_3me-12222022142904.avi"
   }
 }
