@@ -1,0 +1,38 @@
+[
+  {
+    "ID": "15_1",
+    "distance": "2 meters",
+    "blanket": "WB",
+    "breathing": "H",
+    "filename": "frames",
+    "frames": 1834,
+    "length": 232.559538,
+    "old fps": 7.8861525774100905,
+    "alias": "15_1",
+    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR/15/15_1/2 meters/WB/H/frames"
+  },
+  {
+    "ID": "15_2",
+    "distance": "2 Meters",
+    "blanket": "WB",
+    "breathing": "H",
+    "filename": "frames",
+    "frames": 2114,
+    "length": 270.937316,
+    "old fps": 7.802542784471962,
+    "alias": "15_2",
+    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR/15/15_2/2 Meters/WB/H/frames"
+  },
+  {
+    "ID": "15_2",
+    "distance": "2 Meters",
+    "blanket": "WB",
+    "breathing": "R",
+    "filename": "frames",
+    "frames": 2154,
+    "length": 271.864684,
+    "old fps": 7.923059252521376,
+    "alias": "15_2",
+    "local path": "E:/Christian/DI_centre_structured/DI_THERMAL_FLIR/15/15_2/2 Meters/WB/R/frames"
+  }
+]
