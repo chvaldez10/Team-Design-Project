@@ -298,17 +298,5 @@
     "old fps": 118.9237236894335,
     "alias": "6_2",
     "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR/6/6_2/3 meters/WB/R/frames"
-  },
-  {
-    "ID": "6",
-    "distance": "6_3",
-    "blanket": "WOB",
-    "breathing": "H",
-    "filename": "frames",
-    "frames": 10649,
-    "length": 113.657698,
-    "old fps": 93.69360973684334,
-    "alias": "6",
-    "local path": "D:/DI_centre_structured/DI_THERMAL_FLIR/6/6_3/WOB/H/frames"
   }
 ]
