@@ -6,22 +6,10 @@
     "breathing": "Hold Breath",
     "filename": "Arun2.mp4",
     "frames": 2146.0,
-    "length": 73.054497,
-    "old fps": 29.375330583687408,
+    "length": 35.766666666666666,
+    "old fps": 60.0,
     "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Hold Breath\\Arun2.mp4"
-  },
-  "1": {
-    "ID": "Arun",
-    "distance": "2 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Arun2_2.mp4",
-    "frames": 1138.0,
-    "length": 38.59782,
-    "old fps": 29.483530417002825,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Hold Breath\\Arun2_2.mp4"
+    "local path": "C:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Hold Breath\\Arun2.mp4"
   },
   "2": {
     "ID": "Arun",
@@ -30,22 +18,10 @@
     "breathing": "Relaxed",
     "filename": "Arun2.mp4",
     "frames": 143.0,
-    "length": 7.703174999999999,
-    "old fps": 18.563774028241603,
+    "length": 2.3833333333333333,
+    "old fps": 60.0,
     "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Relaxed\\Arun2.mp4"
-  },
-  "3": {
-    "ID": "Arun",
-    "distance": "2 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Relaxed",
-    "filename": "Arun2_2.mp4",
-    "frames": 1137.0,
-    "length": 38.190605,
-    "old fps": 29.77172003428592,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Relaxed\\Arun2_2.mp4"
+    "local path": "C:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\With Blankets\\Relaxed\\Arun2.mp4"
   },
   "4": {
     "ID": "Arun",
@@ -54,10 +30,10 @@
     "breathing": "Hold Breath",
     "filename": "short.mp4",
     "frames": 1790.0,
-    "length": 36.113806000000004,
-    "old fps": 49.56553180797393,
+    "length": 29.833333333333332,
+    "old fps": 60.0,
     "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Hold Breath\\short.mp4"
+    "local path": "C:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Hold Breath\\short.mp4"
   },
   "5": {
     "ID": "Arun",
@@ -66,177 +42,9 @@
     "breathing": "Relaxed",
     "filename": "relax 2meter short.mp4",
     "frames": 3872.0,
-    "length": 72.04854,
-    "old fps": 53.74154701816303,
+    "length": 64.53333333333333,
+    "old fps": 60.0,
     "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Relaxed\\relax 2meter short.mp4"
-  },
-  "6": {
-    "ID": "Arun",
-    "distance": "3 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Arun3.mp4",
-    "frames": 1340.0,
-    "length": 37.059608,
-    "old fps": 36.15796475774919,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\With Blankets\\Hold Breath\\Arun3.mp4"
-  },
-  "7": {
-    "ID": "Arun",
-    "distance": "3 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Relaxed",
-    "filename": "Arun3.mp4",
-    "frames": 1398.0,
-    "length": 41.309832,
-    "old fps": 33.841822450403576,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\With Blankets\\Relaxed\\Arun3.mp4"
-  },
-  "8": {
-    "ID": "Arun",
-    "distance": "3 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Arun3.mp4",
-    "frames": 1438.0,
-    "length": 25.961375999999998,
-    "old fps": 55.389976247792106,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\Without Blankets\\Hold Breath\\Arun3.mp4"
-  },
-  "9": {
-    "ID": "Arun",
-    "distance": "3 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Relaxed",
-    "filename": "Arun3.mp4",
-    "frames": 1470.0,
-    "length": 26.567759000000002,
-    "old fps": 55.330221867790954,
-    "alias": "15",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\3 Meters\\Without Blankets\\Relaxed\\Arun3.mp4"
-  },
-  "10": {
-    "ID": "Illia",
-    "distance": "2 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB.mp4",
-    "frames": 1997.0,
-    "length": 42.697471,
-    "old fps": 46.77091999195924,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\2 Meters\\With Blankets\\Hold Breath\\Illia HB.mp4"
-  },
-  "11": {
-    "ID": "Illia",
-    "distance": "2 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Relaxed",
-    "filename": "Illia.mp4",
-    "frames": 2311.0,
-    "length": 51.551826000000005,
-    "old fps": 44.82867396394455,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\2 Meters\\With Blankets\\Relaxed\\Illia.mp4"
-  },
-  "12": {
-    "ID": "Illia",
-    "distance": "2 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB.mp4",
-    "frames": 2154.0,
-    "length": 40.820155,
-    "old fps": 52.768050488784276,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\2 Meters\\Without Blankets\\Hold Breath\\Illia HB.mp4"
-  },
-  "13": {
-    "ID": "Illia",
-    "distance": "2 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Relaxed",
-    "filename": "Illia.mp4",
-    "frames": 2442.0,
-    "length": 49.465783,
-    "old fps": 49.36745871383457,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\2 Meters\\Without Blankets\\Relaxed\\Illia.mp4"
-  },
-  "14": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB.mp4",
-    "frames": 4088.0,
-    "length": 82.335533,
-    "old fps": 49.65049536996378,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\With Blankets\\Hold Breath\\Illia HB.mp4"
-  },
-  "15": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB2.mp4",
-    "frames": 3955.0,
-    "length": 81.783652,
-    "old fps": 48.359298017163624,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\With Blankets\\Hold Breath\\Illia HB2.mp4"
-  },
-  "16": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "With Blankets",
-    "breathing": "Relaxed",
-    "filename": "Illia.mp4",
-    "frames": 2808.0,
-    "length": 57.00986900000001,
-    "old fps": 49.25462993082829,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\With Blankets\\Relaxed\\Illia.mp4"
-  },
-  "17": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB.mp4",
-    "frames": 2290.0,
-    "length": 53.055206000000005,
-    "old fps": 43.16258804084183,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\Without Blankets\\Hold Breath\\Illia HB.mp4"
-  },
-  "18": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Hold Breath",
-    "filename": "Illia HB1.mp4",
-    "frames": 1740.0,
-    "length": 38.47498,
-    "old fps": 45.22419504831451,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\Without Blankets\\Hold Breath\\Illia HB1.mp4"
-  },
-  "19": {
-    "ID": "Illia",
-    "distance": "3 Meters",
-    "blanket": "Without Blankets",
-    "breathing": "Relaxed",
-    "filename": "Illia.mp4",
-    "frames": 3071.0,
-    "length": 70.204134,
-    "old fps": 43.74386271896752,
-    "alias": "6",
-    "local path": "E:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Illia\\3 Meters\\Without Blankets\\Relaxed\\Illia.mp4"
+    "local path": "C:/Christian/DI_centre_structured/DI_CAMERA_P3225/Final/Arun\\2 Meters\\Without Blankets\\Relaxed\\relax 2meter short.mp4"
   }
 }
