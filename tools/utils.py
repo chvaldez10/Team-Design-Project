@@ -17,3 +17,9 @@ def load_json(json_dir: str, filename: str) -> dict:
     except json.JSONDecodeError:
         print(f"Error: The file {full_path} is not a valid JSON.")
         return {} 
+    
+def export_to_json(filename: str, all_patient_info: dict) -> None:
+    patient_json = json.dumps(all_patient_info, indent=2)
+
+    with open(filename, "w") as json_data:
+        json_data.write(patient_json)
