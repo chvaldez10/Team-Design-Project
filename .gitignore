@@ -64,7 +64,9 @@ coverage.xml
 Thumbs.db
 
 # all metadata
-records/
+*.log
+*.xlsx
+*.json
 
 # Database
 *.sqlite
