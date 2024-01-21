@@ -1,7 +1,33 @@
-# DI Pre - Processing
-
 ![UofC logo](./pictures/uofc_logo-black.jpg)
 
-Data cleaning stage for Drop In (DI) centre research project.
+# ENSF 609/610 Team Design Project 🚀
 
-The goal of the project is to see if DI patients are breathing through the use of video streaming.
+## Description 📝
+
+Automated scripts to create dataset from video files 🎥.
+
+## Team Members 👥
+
+- Mehreen Akmal 🌟
+- Yene Irvine 💫
+- Christian Valdez 🌍
+
+## Folder Structure 📂
+
+- **project_name/** 📁
+  - **notebooks/** 📓
+    - log_filenames.ipynb 📊
+    - vid_to_png.ipynb 🖼️
+  - **records/** 📚
+    - **JSON/** 📄
+    - **logs/** 📜
+    - **xlsx/** 📈
+  - **src/** 💻
+    - utils.py 🔧
+  - requirements.txt 📋
+  - README.md 📖
+  - environment.yml (Optional, for conda environments) 🌱
+
+## Getting Started 🌟
+
+To install all packages, run the command `pip install -r requirements.txt` 💼
