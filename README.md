@@ -16,17 +16,15 @@ Automated scripts to create dataset from video files 🎥.
 
 - **project_name/** 📁
   - **notebooks/** 📓
+    - **src/** 💻
+    - .env
     - log_filenames.ipynb 📊
-    - vid_to_png.ipynb 🖼️
   - **records/** 📚
     - **JSON/** 📄
     - **logs/** 📜
     - **xlsx/** 📈
-  - **src/** 💻
-    - utils.py 🔧
   - requirements.txt 📋
   - README.md 📖
-  - environment.yml (Optional, for conda environments) 🌱
 
 ## Getting Started 🌟
 
