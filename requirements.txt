@@ -3,3 +3,4 @@ numpy
 opencv-python
 matplotlib
 scikit-learn
+python-dotenv
