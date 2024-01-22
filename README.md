@@ -1,4 +1,4 @@
-![UofC logo](./pictures/uofc_logo-black.jpg)
+![UofC logo](assets/images/uofc_logo-black.jpg)
 
 # ENSF 609/610 Team Design Project 🚀
 
