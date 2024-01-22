@@ -23,6 +23,8 @@ Automated scripts to create dataset from video files 🎥.
     - **JSON/** 📄
     - **logs/** 📜
     - **xlsx/** 📈
+  - **assets/** 🛠️
+    - **images/** 📷
   - requirements.txt 📋
   - README.md 📖
 
