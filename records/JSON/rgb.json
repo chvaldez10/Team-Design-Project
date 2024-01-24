@@ -1,5 +1,5 @@
-{
-  "0": {
+[
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -11,7 +11,7 @@
     "breathing": "Hold Breath",
     "filename": "short.mp4"
   },
-  "1": {
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -23,31 +23,7 @@
     "breathing": "Relaxed",
     "filename": "relax 2meter short.mp4"
   },
-  "2": {
-    "frames": null,
-    "length": null,
-    "old fps": null,
-    "alias": null,
-    "local path": "/Users/spicyrice/Documents/Personal Projects/DI/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/.DS_Store",
-    "ID": "DI_CAMERA_P3225",
-    "distance": "Final",
-    "blanket": "Arun",
-    "breathing": "2 Meters",
-    "filename": ".DS_Store"
-  },
-  "3": {
-    "frames": null,
-    "length": null,
-    "old fps": null,
-    "alias": null,
-    "local path": "/Users/spicyrice/Documents/Personal Projects/DI/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/2 Meters/With Blankets/.DS_Store",
-    "ID": "Final",
-    "distance": "Arun",
-    "blanket": "2 Meters",
-    "breathing": "With Blankets",
-    "filename": ".DS_Store"
-  },
-  "4": {
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -59,7 +35,7 @@
     "breathing": "Hold Breath",
     "filename": "Arun2_2.mp4"
   },
-  "5": {
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -71,7 +47,7 @@
     "breathing": "Hold Breath",
     "filename": "Arun2.mp4"
   },
-  "6": {
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -83,7 +59,7 @@
     "breathing": "Relaxed",
     "filename": "Arun2_2.mp4"
   },
-  "7": {
+  {
     "frames": null,
     "length": null,
     "old fps": null,
@@ -94,17 +70,5 @@
     "blanket": "With Blankets",
     "breathing": "Relaxed",
     "filename": "Arun2.mp4"
-  },
-  "8": {
-    "frames": null,
-    "length": null,
-    "old fps": null,
-    "alias": null,
-    "local path": "/Users/spicyrice/Documents/Personal Projects/DI/DI_centre_structured/DI_CAMERA_P3225/Final/Arun/.DS_Store",
-    "ID": "DI_centre_structured",
-    "distance": "DI_CAMERA_P3225",
-    "blanket": "Final",
-    "breathing": "Arun",
-    "filename": ".DS_Store"
   }
-}
+]
