@@ -2,9 +2,15 @@ import os
 import re
 from typing import List
 
-def get_patient_id(curr_dir:str) -> List[str]:
-    patient_names = [folder_content for folder_content in os.listdir(curr_dir) if os.path.isdir(folder_content)]
-    return patient_names
+def get_patient_id(curr_dir: str) -> List[str]:
+    try:
+        patient_names = [folder_content for folder_content in os.listdir(curr_dir) if os.path.isdir(os.path.join(curr_dir, folder_content))]
+        return patient_names
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+def display_print():
+    print("hi")
 
 def filter_filenames(video_filenames: List[str], keyword: str) -> List[str]:
     """
@@ -34,6 +40,7 @@ def write_filtered_filenames_to_log(file_paths: List[str], log_file: str) -> Non
     """
     Write a list of file paths to a log file.
     """
+    print(log_file)
     with open(log_file, "a") as file:
         for path in file_paths:
             file.write(f"{path}\n")
