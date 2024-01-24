@@ -2,15 +2,18 @@ import os
 import re
 from typing import List
 
+# import custom functions
+from notebooks.src.export_utilities import write_filtered_filenames_to_log
+
 def get_patient_id(curr_dir: str) -> List[str]:
+    """
+    Get patient id from list of folders.
+    """
     try:
         patient_names = [folder_content for folder_content in os.listdir(curr_dir) if os.path.isdir(os.path.join(curr_dir, folder_content))]
         return patient_names
     except Exception as e:
         print(f"An error occurred: {e}")
-
-def display_print():
-    print("hi")
 
 def filter_filenames(video_filenames: List[str], keyword: str) -> List[str]:
     """
@@ -35,15 +38,6 @@ def get_video_filenames(patient_path: str, current_level: int, max_level: int) -
             file_paths.extend(deeper_paths)
 
     return file_paths
-
-def write_filtered_filenames_to_log(file_paths: List[str], log_file: str) -> None:
-    """
-    Write a list of file paths to a log file.
-    """
-    print(log_file)
-    with open(log_file, "a") as file:
-        for path in file_paths:
-            file.write(f"{path}\n")
 
 def log_patient_video_files(root_dir: str, save_dir: str, log_filename: str, keywords: List[str], patient_list: List[str], max_level: int) -> None:
     """
