@@ -2,20 +2,15 @@ import os
 from typing import List
 import traceback
 
-def read_log_files(log_directory: str) -> List[List[str]]:
+def read_log_files(log_file: str) -> List[str]:
     video_files = []
     
-    # Create a list of log file paths
-    log_files = [os.path.join(log_directory, file) for file in os.listdir(log_directory) if file.endswith(".log")]
-
-    for log_file_path in log_files:
-        try:
-            with open(log_file_path, "r") as file:
-                # Exclude empty lines directly here
-                log_content = [line for line in file.read().split("\n") if line]
-                video_files.append(log_content)
-        except FileNotFoundError:
-            print(f"File not found: {log_file_path}")
+    try:
+        with open(log_file, "r") as file:
+            log_content = [line for line in file.read().split("\n") if line]
+            video_files.append(log_content)
+    except FileNotFoundError:
+        print(f"File not found: {log_file}")
 
     return video_files
 
@@ -41,10 +36,8 @@ def extract_info_from_filepath(filepaths: List[str]) -> List[dict]:
 
     for filepath in filepaths:
         try:
-            # Use os.path for compatibility and readability
             filepath_parts = os.path.normpath(filepath).split(os.sep)[-splice_stop:]
 
-            # Extract info from filepath
             patient_info = {tag: filepath_parts[i] for i, tag in file_info_from_path.items() if i < splice_stop}
 
             # Combine information from filepath and default parameters
