@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 import json
 import os
 
@@ -15,7 +15,7 @@ def parse_line_by_line(log_file: str) -> List[str]:
 
     return file_content
 
-def load_json(json_dir: str, filename: str) -> dict:
+def load_json(json_dir: str, filename: str) -> Dict:
     """
     Loads a JSON file from a specified directory and filename.
 

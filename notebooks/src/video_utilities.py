@@ -81,9 +81,9 @@ def add_video_properties(metadata: dict, camera: str) -> dict:
     Returns:
     dict: The enriched metadata with added video properties and aliases.
     """
-    enriched_metadata = {}
+    enriched_metadata = []
 
-    for patient_id, patient_info in metadata.items():
+    for patient_id, patient_info in enumerate(metadata):
         try:
             video_path = patient_info.get("local path")
             if not video_path:
@@ -99,7 +99,7 @@ def add_video_properties(metadata: dict, camera: str) -> dict:
                 "alias": alias
             })
 
-            enriched_metadata[patient_id] = patient_info
+            enriched_metadata.append(patient_info)
 
         except Exception as e:
             print(f"Error processing patient ID {patient_info['ID']}: {e}")

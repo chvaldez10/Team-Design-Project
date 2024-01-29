@@ -43,3 +43,5 @@ def get_alias(patient_info: dict, camera: str) -> str:
     
     if camera == "thermal":
         return patient_id
+    
+
