@@ -1,3 +1,5 @@
+from typing import List, Dict
+
 ALIAS_ID = {
     "Rachael B": "1",
     "Sara": "2",
@@ -44,4 +46,19 @@ def get_alias(patient_info: dict, camera: str) -> str:
     if camera == "thermal":
         return patient_id
     
+def add_json_index(metadata: List[Dict]) -> Dict[int, Dict]:
+    """
+    Transforms a list of dictionaries into a dictionary indexed by integers.
 
+    This function assigns an index to each dictionary in the list, starting from 0, and returns a new dictionary where each key is the index and the value is the corresponding dictionary from the list.
+
+    Args:
+    metadata (List[Dict]): A list of dictionaries, each containing patient data.
+
+    Returns:
+    Dict[int, Dict]: A dictionary where keys are indices (starting from 0) and values are the patient data dictionaries from the input list.
+    """
+    metadata_with_id = {}
+    for id, patient_data in enumerate(metadata):
+        metadata_with_id[id] = patient_data
+    return metadata_with_id

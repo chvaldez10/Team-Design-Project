@@ -1,5 +1,6 @@
 import cv2
 import os
+from typing import Dict, List, Tuple
 
 # reload for module caching
 from importlib import reload
@@ -45,7 +46,7 @@ def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def get_video_properties(mp4_file: str) -> tuple:
+def get_video_properties(mp4_file: str) -> Tuple:
     """
     Extracts properties from an MP4 video file.
 
@@ -70,7 +71,7 @@ def get_video_properties(mp4_file: str) -> tuple:
         print(f"{type(e).__name__} occurred while processing {mp4_file}: {e}")
         return None
 
-def add_video_properties(metadata: dict, camera: str) -> dict:
+def add_video_properties(metadata: List[Dict], camera: str) -> List[Dict]:
     """
     Enhances patient metadata with video properties and alias based on camera type.
 
