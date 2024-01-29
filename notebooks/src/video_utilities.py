@@ -1,6 +1,14 @@
 import cv2
 import os
 
+# reload for module caching
+from importlib import reload
+import src.id_utilities
+reload(src.id_utilities)
+
+# import custom functions
+from src.id_utilities import get_alias
+
 def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10):
     """
     Creates a video from a series of PNG images in a specified folder.
@@ -61,3 +69,39 @@ def get_video_properties(mp4_file: str) -> tuple:
     except Exception as e:
         print(f"{type(e).__name__} occurred while processing {mp4_file}: {e}")
         return None
+
+def add_video_properties(metadata: dict, camera: str) -> dict:
+    """
+    Enhances patient metadata with video properties and alias based on camera type.
+
+    Args:
+    metadata (dict): A dictionary of patient metadata.
+    camera (str): The type of camera used ('rgb' or 'thermal').
+
+    Returns:
+    dict: The enriched metadata with added video properties and aliases.
+    """
+    enriched_metadata = {}
+
+    for patient_id, patient_info in metadata.items():
+        try:
+            video_path = patient_info.get("local path")
+            if not video_path:
+                raise ValueError(f"Missing 'local path' for patient ID {patient_info['ID']}")
+
+            frames, fps, length_in_seconds = get_video_properties(video_path)
+            alias = get_alias(patient_info, camera)
+
+            patient_info.update({
+                "frames": frames,
+                "old fps": fps,
+                "length": length_in_seconds,
+                "alias": alias
+            })
+
+            enriched_metadata[patient_id] = patient_info
+
+        except Exception as e:
+            print(f"Error processing patient ID {patient_info['ID']}: {e}")
+
+    return enriched_metadata
