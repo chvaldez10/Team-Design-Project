@@ -4,8 +4,8 @@ def replace_substring_in_list(list_of_strings: List[str], string_to_replace: str
     """
     Replace a specified substring with another substring in each string of a list.
 
-    This function modifies each string in the given list in-place. It searches for a 
-    specified substring (string_to_replace) in each string and replaces it with 
+    This function modifies each string in the given list in-place. It searches for a
+    specified substring (string_to_replace) in each string and replaces it with
     another specified substring (string_to_replace_it_with).
 
     Args:

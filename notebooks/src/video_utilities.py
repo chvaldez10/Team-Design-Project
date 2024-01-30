@@ -71,7 +71,7 @@ def get_video_properties(mp4_file: str) -> Tuple:
         print(f"{type(e).__name__} occurred while processing {mp4_file}: {e}")
         return None
 
-def add_video_properties(metadata: List[Dict], camera: str) -> List[Dict]:
+def add_video_properties(root_path:str, metadata: List[Dict], camera: str) -> List[Dict]:
     """
     Enhances patient metadata with video properties and alias based on camera type.
 
@@ -86,7 +86,7 @@ def add_video_properties(metadata: List[Dict], camera: str) -> List[Dict]:
 
     for patient_id, patient_info in enumerate(metadata):
         try:
-            video_path = patient_info.get("local path")
+            video_path = root_path + patient_info.get("local path")
             if not video_path:
                 raise ValueError(f"Missing 'local path' for patient ID {patient_info['ID']}")
 
