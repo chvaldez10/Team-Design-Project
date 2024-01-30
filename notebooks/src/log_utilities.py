@@ -1,9 +1,17 @@
 import os
 import re
 from typing import List
+from importlib import reload
+
+# reload for module caching
+import src.export_utilities
+reload(src.export_utilities)
+import src.string_utilities
+reload(src.string_utilities)
 
 # import custom functions
 from src.export_utilities import write_filtered_filenames_to_log
+from src.string_utilities import replace_substring_in_list
 
 def get_patient_id(curr_dir: str) -> List[str]:
     """
@@ -40,7 +48,7 @@ def get_video_filenames(patient_path: str, current_level: int, max_level: int) -
 
     return file_paths
 
-def log_patient_video_files(root_dir: str, save_dir: str, log_filename: str, keywords: List[str], patient_list: List[str], max_level: int) -> None:
+def log_patient_video_files(root_dir: str, save_dir: str, log_filename: str, keywords: List[str], patient_list: List[str], max_level: int, root_path:str) -> None:
     """
     Process files for each patient, filtering and saving the filenames to a log file.
     """
@@ -53,4 +61,5 @@ def log_patient_video_files(root_dir: str, save_dir: str, log_filename: str, key
         all_patient_files.extend(patient_files)
     
     all_patient_files = filter_filenames(all_patient_files, keywords)
+    replace_substring_in_list(all_patient_files, root_path, "")
     write_filtered_filenames_to_log(all_patient_files, log_file)

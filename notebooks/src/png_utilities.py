@@ -1,6 +1,6 @@
 import os
 import shutil
-import np
+import numpy as np
 import cv2
 
 def move_png(log_file):
@@ -13,7 +13,7 @@ def move_png(log_file):
         video_filename = str_list[-1]
         output_folder = folder_name + "/" + "frames"
 
-        if(video_filename.endswith("png")):
+        if (video_filename.endswith("png")):
             print(f"moving {video_filename} to {output_folder}")
 
             if (not os.path.exists(output_folder)):
