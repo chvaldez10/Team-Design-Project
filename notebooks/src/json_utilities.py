@@ -1,5 +1,31 @@
 import json
 from typing import List, Dict
+import copy
+
+CLIENT_SCHEMA = {
+    "Without Blankets": {
+        "Hold Breath": {
+            "2 Meters": {},
+            "3 Meters": {}
+        },
+        "Relaxed": {
+            "2 Meters": {},
+            "3 Meters": {}
+        }
+    },
+    "With Blankets": {
+        "Hold Breath": {
+            "2 Meters": {},
+            "3 Meters": {}
+        },
+        "Relaxed": {
+            "2 Meters": {},
+            "3 Meters:": {}
+        }
+    },
+}
+
+DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "alias", "local path", "ID", "filename"]
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
     """
@@ -19,38 +45,32 @@ def switch_dictionary_values(key1: str, key2: str, patient_information: list) ->
     for patient in patient_information:
         patient[key1], patient[key2] = patient[key2], patient[key1]
 
-
-def restructure_json_file(metadata: List[Dict]) -> None:
+def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
     """
-    Rearrange entries in each dictionary within a list in a json file.
-
-    This function modifies each dictionary in the given list in a json file in-place.
+    Restructures a list of patient metadata dictionaries to match a predefined schema, 
+    avoiding direct modification of global variables and handling missing keys gracefully.
 
     Args:
-    json_filename (list): A list of dictionaries containing metadata.
+        patient_metadata (List[Dict]): A list of dictionaries containing patient metadata.
 
     Returns:
-    None: This function modifies the json file structure in-place and returns None.
+        Dict: A new dictionary structured according to `CLIENT_SCHEMA`, populated with patient data.
     """
+    # Deep copy the schema to avoid modifying the global variable
+    new_structures = copy.deepcopy(CLIENT_SCHEMA)
 
-    # Define an empty list to store the new folder structures
-    new_structures = []
+    # Iterate over each dictionary in the patient metadata
+    for index, patient_data in enumerate(patient_metadata, start=1):
+        blanket_status = patient_data.get("blanket", "Without Blankets")
+        breathing_status = patient_data.get("breathing", "Relaxed")
+        distance = patient_data.get("distance", "2 Meters")
 
-    # Iterate over each dictionary in the original JSON data
-    for index, entry in enumerate(metadata, start=1):
-        # Define the new structure for each dictionary
-        new_structure = {
-            entry["blanket"]: {
-                entry["breathing"]: {
-                    entry["distance"]: {
-                        # Use the string representation of i as the key
-                        str(index): entry
-                    }
-                }
-            }
-        }
-        # Append the new structure to the list
-        new_structures.append(new_structure)
+        # Initialize patient_video_data with the required fields
+        patient_video_data = {key: patient_data.get(key) for key in DESIRED_VIDEO_DATA}
 
-    # Convert the list of new structures to JSON format
+        if blanket_status in new_structures and breathing_status in new_structures[blanket_status] and distance in new_structures[blanket_status][breathing_status]:
+            new_structures[blanket_status][breathing_status][distance][str(index)] = patient_video_data
+        else:
+            print(f"Invalid configuration for patient {index}: {patient_data}")
+
     return new_structures
