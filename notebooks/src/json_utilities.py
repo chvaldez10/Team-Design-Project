@@ -1,5 +1,5 @@
 import json
-
+from typing import List, Dict
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
     """
@@ -20,7 +20,7 @@ def switch_dictionary_values(key1: str, key2: str, patient_information: list) ->
         patient[key1], patient[key2] = patient[key2], patient[key1]
 
 
-def restructure_json_file(json_filename) -> None:
+def restructure_json_file(metadata: List[Dict]) -> None:
     """
     Rearrange entries in each dictionary within a list in a json file.
 
@@ -33,22 +33,18 @@ def restructure_json_file(json_filename) -> None:
     None: This function modifies the json file structure in-place and returns None.
     """
 
-    # Read the original JSON data from the file
-    with open(json_filename, 'r') as file:
-        original_json = json.load(file)
-
     # Define an empty list to store the new folder structures
     new_structures = []
 
     # Iterate over each dictionary in the original JSON data
-    for i, entry in enumerate(original_json, start=1):
+    for index, entry in enumerate(metadata, start=1):
         # Define the new structure for each dictionary
         new_structure = {
             entry["blanket"]: {
                 entry["breathing"]: {
                     entry["distance"]: {
                         # Use the string representation of i as the key
-                        str(i): entry
+                        str(index): entry
                     }
                 }
             }
@@ -57,8 +53,4 @@ def restructure_json_file(json_filename) -> None:
         new_structures.append(new_structure)
 
     # Convert the list of new structures to JSON format
-    new_json = json.dumps(new_structures, indent=2)
-
-    # Write the new JSON to a file
-    with open(json_filename, 'w') as file:
-        file.write(new_json)
+    return new_structures
