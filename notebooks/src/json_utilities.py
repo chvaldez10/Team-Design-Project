@@ -24,7 +24,7 @@ def restructure_json_file(json_filename) -> None:
     """
     Rearrange entries in each dictionary within a list in a json file.
 
-    This function modifies each dictionary in the given list in a json file in-place. 
+    This function modifies each dictionary in the given list in a json file in-place.
 
     Args:
     json_filename (list): A list of dictionaries containing metadata.
