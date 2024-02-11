@@ -77,17 +77,13 @@ def add_json_index(metadata: List[Dict]) -> Dict[int, Dict]:
         metadata_with_id[id] = patient_data
     return metadata_with_id
 
-def get_patient_id(blanket: str, distance: str, breathing: str, index: int, alias:int) -> str:
+def get_patient_id(alias: int, blanket: str, distance: str, breathing: str, index: int) -> str:
     """
     Creates a unique ID for a patient video scenario.
-
-    Parameters:
-    patient_data (dict): Dictionary containing patient information.
-    video_count (int): The count of videos for the patient.
-
-    Returns:
-    str: A unique ID string for the video.
     """
-    pass
-    # alias = patient_data.get("alias", "Unknown")
-    # return f"{alias}_{video_count}-{distance}-{blanket}-{breathing}"
+
+    blanket_abbreviation = VIDEO_CHARACTERISTICS.get(blanket, "?")
+    distance_abbreviation = VIDEO_CHARACTERISTICS.get(distance.title(), "?")
+    breathing_abbreviation = VIDEO_CHARACTERISTICS.get(breathing, "?")
+
+    return f"{alias}_{index}-{blanket_abbreviation}-{distance_abbreviation}-{breathing_abbreviation}"

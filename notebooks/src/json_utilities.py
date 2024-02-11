@@ -33,7 +33,7 @@ CLIENT_SCHEMA = {
     },
 }
 
-DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "alias", "local path", "first name", "filename"]
+DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "local path", "first name", "filename"]
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
     """
@@ -69,15 +69,17 @@ def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
 
     # Iterate over each dictionary in the patient metadata
     for index, patient_data in enumerate(patient_metadata, start=1):
-        blanket_status = patient_data.get("blanket", "Without Blankets")
-        breathing_status = patient_data.get("breathing", "Relaxed")
-        distance = patient_data.get("distance", "2 Meters")
+        alias = patient_data.get("alias", "?")
+        blanket_status = patient_data["blanket"]
+        breathing_status = patient_data["breathing"]
+        distance = patient_data["distance"]
+        patient_id = get_patient_id(alias, blanket_status, breathing_status, distance, index)
 
         # Initialize patient_video_data with the required fields
         patient_video_data = {key: patient_data.get(key) for key in DESIRED_VIDEO_DATA}
 
         if blanket_status in new_structures and breathing_status in new_structures[blanket_status] and distance in new_structures[blanket_status][breathing_status]:
-            new_structures[blanket_status][breathing_status][distance][str(index)] = patient_video_data
+            new_structures[blanket_status][breathing_status][distance][patient_id] = patient_video_data
         else:
             print(f"Invalid configuration for patient {index}: {patient_data}")
 
