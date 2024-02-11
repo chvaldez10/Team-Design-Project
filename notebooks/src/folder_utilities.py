@@ -17,3 +17,5 @@ def set_folder(save_folder: str) -> None:
                 file_path.unlink()  # Remove file
         except OSError as e:
             print(f"Error deleting file {file_path}: {e}")
+
+def set_folder_path_for_export

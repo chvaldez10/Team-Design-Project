@@ -1,0 +1,8 @@
+{
+  "video folder": "DI_CAMERA_P3225",
+  "1st level": ["Final"],
+  "2nd level": "Patient Name",
+  "3rd level": [2, 3],
+  "4th level": { "B": "With Blankets", "WOB": "Without Blankets" },
+  "5th level": { "H": "Hold Breath", "R": "Relaxed" }
+}

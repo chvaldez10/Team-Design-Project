@@ -1,0 +1,8 @@
+{
+  "video folder": "DI_THERMAL_FLIR",
+  "1st level": [""],
+  "2nd level": "Patient Number",
+  "3rd level": [2, 3],
+  "4th level": { "H": "Hold Breath", "R": "Relaxed" },
+  "5th level": { "B": "With Blankets", "WOB": "Without Blankets" }
+}
