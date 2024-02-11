@@ -16,8 +16,9 @@ def read_log_files(log_file: str) -> List[str]:
 
 def extract_info_from_filepath(filepaths: List[str]) -> List[dict]:
     all_videos = []
+    
     file_info_from_path = {
-        0: "ID",
+        0: "first name",
         1: "distance",
         2: "blanket",
         3: "breathing",

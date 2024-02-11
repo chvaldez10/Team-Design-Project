@@ -1,6 +1,14 @@
 import json
 from typing import List, Dict
 import copy
+from importlib import reload
+
+# reload for module caching
+import src.id_utilities
+reload(src.id_utilities)
+
+# import custom functions
+from src.id_utilities import get_patient_id
 
 CLIENT_SCHEMA = {
     "Without Blankets": {
@@ -25,7 +33,7 @@ CLIENT_SCHEMA = {
     },
 }
 
-DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "alias", "local path", "ID", "filename"]
+DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "alias", "local path", "first name", "filename"]
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
     """

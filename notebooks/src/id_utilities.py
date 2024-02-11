@@ -19,8 +19,22 @@ ALIAS_ID = {
     "Riyan": "16",
     "Joseph": "17",
     "John Brunton": "18",
-    "Illia2": "19",
-    "Frank2": "20"
+    "Illia2": "6",
+    "Frank2": "14"
+}
+
+VIDEO_CHARACTERISTICS = {
+    "With Blankets" : "WB",
+    "B" : "WB",
+    "Without Blankets" : "WOB",
+    "WOB": "WOB",
+    "3 Meters" : "3m",
+    "2 Meters" : "2m",
+    "Hold Breath" : "HB",
+    "Hold Breathe" : "HB",
+    "H" : "HB",
+    "Relaxed" : "rel",
+    "R": "rel",
 }
 
 def get_alias(patient_info: dict, camera: str) -> str:
@@ -36,7 +50,7 @@ def get_alias(patient_info: dict, camera: str) -> str:
          If the 'ID' key is missing in patient_info, returns 'Unknown'.
     """
     try:
-        patient_id = patient_info["ID"]
+        patient_id = patient_info["first name"]
     except KeyError:
         return "Unknown"
 
@@ -62,3 +76,18 @@ def add_json_index(metadata: List[Dict]) -> Dict[int, Dict]:
     for id, patient_data in enumerate(metadata):
         metadata_with_id[id] = patient_data
     return metadata_with_id
+
+def get_patient_id(blanket: str, distance: str, breathing: str, index: int, alias:int) -> str:
+    """
+    Creates a unique ID for a patient video scenario.
+
+    Parameters:
+    patient_data (dict): Dictionary containing patient information.
+    video_count (int): The count of videos for the patient.
+
+    Returns:
+    str: A unique ID string for the video.
+    """
+    pass
+    # alias = patient_data.get("alias", "Unknown")
+    # return f"{alias}_{video_count}-{distance}-{blanket}-{breathing}"
