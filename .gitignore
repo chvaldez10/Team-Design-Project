@@ -73,3 +73,6 @@ Thumbs.db
 
 # Environment variables
 .env
+
+#personal files
+del_me.*

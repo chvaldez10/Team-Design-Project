@@ -2,19 +2,18 @@ from pathlib import Path
 
 def set_folder(save_folder: str) -> None:
     """
-    Ensures the specified folder exists and is empty.
-    If the folder doesn't exist, it is created. If it exists, its contents are removed.
+    Ensures the specified folder exists. If the folder doesn't exist, it is created.
+    Regardless, its contents are removed to ensure it's empty.
 
     Args:
     save_folder (str): The path to the folder.
     """
     folder_path = Path(save_folder)
-    if not folder_path.is_dir():
-        folder_path.mkdir(parents=True, exist_ok=True)
-    else:
+    folder_path.mkdir(parents=True, exist_ok=True)  # Create folder if not exists; no-op if exists.
+    
+    for file_path in folder_path.iterdir():
         try:
-            for file_name in folder_path.iterdir():
-                if file_name.is_file():
-                    file_name.unlink()
+            if file_path.is_file():
+                file_path.unlink()  # Remove file
         except OSError as e:
-            print(f"Error: {e}")
+            print(f"Error deleting file {file_path}: {e}")
