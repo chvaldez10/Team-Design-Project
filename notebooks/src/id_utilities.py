@@ -86,4 +86,4 @@ def get_patient_id(alias: int, blanket: str, distance: str, breathing: str, inde
     distance_abbreviation = VIDEO_CHARACTERISTICS.get(distance.title(), "?")
     breathing_abbreviation = VIDEO_CHARACTERISTICS.get(breathing, "?")
 
-    return f"{alias}_{index}-{blanket_abbreviation}-{distance_abbreviation}-{breathing_abbreviation}"
+    return f"{alias}_{index}-{blanket_abbreviation}-{breathing_abbreviation}-{distance}"

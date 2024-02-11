@@ -12,23 +12,23 @@ from src.id_utilities import get_patient_id
 
 CLIENT_SCHEMA = {
     "Without Blankets": {
-        "Hold Breath": {
-            "2 Meters": {},
-            "3 Meters": {}
+        "2 Meters": {
+            "Hold Breath": {},
+            "Relaxed": {}
         },
-        "Relaxed": {
-            "2 Meters": {},
-            "3 Meters": {}
+        "3 Meters": {
+            "Hold Breath": {},
+            "Relaxed": {}
         }
     },
     "With Blankets": {
-        "Hold Breath": {
-            "2 Meters": {},
-            "3 Meters": {}
+        "2 Meters": {
+            "Hold Breath": {},
+            "Relaxed": {}
         },
-        "Relaxed": {
-            "2 Meters": {},
-            "3 Meters:": {}
+        "3 Meters": {
+            "Hold Breath": {},
+            "Relaxed": {}
         }
     },
 }
@@ -71,15 +71,15 @@ def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
     for index, patient_data in enumerate(patient_metadata, start=1):
         alias = patient_data.get("alias", "?")
         blanket_status = patient_data["blanket"]
-        breathing_status = patient_data["breathing"]
         distance = patient_data["distance"]
+        breathing_status = patient_data["breathing"]
         patient_id = get_patient_id(alias, blanket_status, breathing_status, distance, index)
 
         # Initialize patient_video_data with the required fields
         patient_video_data = {key: patient_data.get(key) for key in DESIRED_VIDEO_DATA}
 
-        if blanket_status in new_structures and breathing_status in new_structures[blanket_status] and distance in new_structures[blanket_status][breathing_status]:
-            new_structures[blanket_status][breathing_status][distance][patient_id] = patient_video_data
+        if blanket_status in new_structures and distance in new_structures[blanket_status] and breathing_status in new_structures[blanket_status][distance]:
+            new_structures[blanket_status][distance][breathing_status][patient_id] = patient_video_data
         else:
             print(f"Invalid configuration for patient {index}: {patient_data}")
 
