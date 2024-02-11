@@ -1,5 +1,6 @@
 import cv2
 import os
+
 def is_png_corrupted(file_path: str) -> bool:
     """
     Checks if a PNG file is corrupted.
