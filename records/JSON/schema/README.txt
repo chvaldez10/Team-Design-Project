@@ -1,0 +1,1 @@
+Folder for no-sql schema.
