@@ -57,7 +57,7 @@ def export_to_excel(patient_info: dict, filename: str) -> None:
         patient_df = patient_df.drop(columns=["local path"])
 
         # Set multi-level index
-        new_df = patient_df.set_index(["ID", "distance", "breathing", "blanket", "filename"])
+        new_df = patient_df.set_index(["first name", "distance", "breathing", "blanket", "filename"])
 
         # Export to Excel
         new_df.to_excel(filename)
