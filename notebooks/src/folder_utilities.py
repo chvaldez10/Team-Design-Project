@@ -18,4 +18,4 @@ def set_folder(save_folder: str) -> None:
         except OSError as e:
             print(f"Error deleting file {file_path}: {e}")
 
-def set_folder_path_for_export
+def create_folders_path_for_export
