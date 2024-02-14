@@ -3,7 +3,24 @@ import pandas as pd
 from typing import List
 import os
 
+def process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id):
+    """
+    Converts a video to frames based on specified parameters.
 
+    Args:
+    - video_path (str): Path to the video file.
+    - frames_folder (str): Path to the folder to save the frames.
+    - frames_to_pick (list): List of frames to pick from the video.
+    - new_fps (int): The new frames per second.
+    - patient_id (str): The patient's identifier.
+
+    Prints:
+    - Information about the frame processing.
+    """
+    frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
+    set_counter, save_counter, true_frames = run_video_to_frame(video_path, frames_folder, frame_frequency, new_fps, patient_id, False)
+    print(f"\nSet counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n"+ "-"*50)
+    find_corrupted_png_files(frames_folder)
 
 def get_video_frame_paths(local_path: str, level: str) -> List[str]:
     """
@@ -56,28 +73,9 @@ def resample_and_validate_frames(old_fps, new_fps):
         raise ValueError("Number of frames to pick is not equal to new fps")
     return frames_to_pick
 
-def process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id):
-    """
-    Converts a video to frames based on specified parameters.
-
-    Args:
-    - video_path (str): Path to the video file.
-    - frames_folder (str): Path to the folder to save the frames.
-    - frames_to_pick (list): List of frames to pick from the video.
-    - new_fps (int): The new frames per second.
-    - patient_id (str): The patient's identifier.
-
-    Prints:
-    - Information about the frame processing.
-    """
-    frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
-    set_counter, save_counter, true_frames = run_video_to_frame(video_path, frames_folder, frame_frequency, new_fps, patient_id, False)
-    print(f"\nSet counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n"+ "-"*50)
-    find_corrupted_png_files(frames_folder)
-
 def convert_video_to_frame(all_patients: dict, level: str, new_fps: int, user_drive: str) -> list[str]:
     """
-    Converts videos of multiple patients to frames.
+    Driver code to converts videos of multiple patients to frames.
 
     Args:
     - all_patients (dict): A dictionary of all patients and their video information.
@@ -87,9 +85,6 @@ def convert_video_to_frame(all_patients: dict, level: str, new_fps: int, user_dr
 
     Returns:
     - list[str]: A list of paths to folders containing frames for each patient.
-
-    Note:
-    - This function stops after processing the first patient. Remove 'break' to process all.
     """
     visited_folders = {}
     video_folder_list = []
