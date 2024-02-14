@@ -35,7 +35,7 @@ Automated scripts to create dataset from video files 🎥.
 
 To install all packages, run the command `pip install -r requirements.txt` 💼
 
-Create a .env file with the following config:
+Create an .env file with the following config:
 
 ```
 ROOT_FOLDER=
