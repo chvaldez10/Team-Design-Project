@@ -2,7 +2,7 @@
   "Without Blankets": {
     "2 Meters": {
       "Hold Breath": {
-        "15_5-WOB-2m-Hold Breath": {
+        "15_5-WOB-2M-HB": {
           "frames": 1790.0,
           "length": 36.113806000000004,
           "old fps": 49.56553180797393,
@@ -12,7 +12,7 @@
         }
       },
       "Relaxed": {
-        "15_6-WOB-2m-Relaxed": {
+        "15_6-WOB-2M-REL": {
           "frames": 3872.0,
           "length": 72.04854,
           "old fps": 53.74154701816303,
@@ -30,7 +30,7 @@
   "With Blankets": {
     "2 Meters": {
       "Hold Breath": {
-        "15_1-WB-2m-Hold Breath": {
+        "15_1-WB-2M-HB": {
           "frames": 2146.0,
           "length": 73.054497,
           "old fps": 29.375330583687408,
@@ -38,7 +38,7 @@
           "first name": "Arun",
           "filename": "Arun2.mp4"
         },
-        "15_2-WB-2m-Hold Breath": {
+        "15_2-WB-2M-HB": {
           "frames": 1138.0,
           "length": 38.59782,
           "old fps": 29.483530417002825,
@@ -48,7 +48,7 @@
         }
       },
       "Relaxed": {
-        "15_3-WB-2m-Relaxed": {
+        "15_3-WB-2M-REL": {
           "frames": 143.0,
           "length": 7.703174999999999,
           "old fps": 18.563774028241603,
@@ -56,7 +56,7 @@
           "first name": "Arun",
           "filename": "Arun2.mp4"
         },
-        "15_4-WB-2m-Relaxed": {
+        "15_4-WB-2M-REL": {
           "frames": 1137.0,
           "length": 38.190605,
           "old fps": 29.77172003428592,

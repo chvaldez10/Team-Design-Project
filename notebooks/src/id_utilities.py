@@ -28,13 +28,13 @@ VIDEO_CHARACTERISTICS = {
     "B" : "WB",
     "Without Blankets" : "WOB",
     "WOB": "WOB",
-    "3 Meters" : "3m",
-    "2 Meters" : "2m",
+    "3 Meters" : "3M",
+    "2 Meters" : "2M",
     "Hold Breath" : "HB",
     "Hold Breathe" : "HB",
     "H" : "HB",
-    "Relaxed" : "rel",
-    "R": "rel",
+    "Relaxed" : "REL",
+    "R": "REL",
 }
 
 def get_alias(patient_info: dict, camera: str) -> str:
@@ -86,4 +86,4 @@ def get_patient_id(alias: int, blanket: str, distance: str, breathing: str, inde
     distance_abbreviation = VIDEO_CHARACTERISTICS.get(distance.title(), "?")
     breathing_abbreviation = VIDEO_CHARACTERISTICS.get(breathing, "?")
 
-    return f"{alias}_{index}-{blanket_abbreviation}-{breathing_abbreviation}-{distance}"
+    return f"{alias}_{index}-{blanket_abbreviation}-{distance_abbreviation}-{breathing_abbreviation}"

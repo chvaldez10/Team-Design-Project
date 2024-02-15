@@ -73,7 +73,7 @@ def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
         blanket_status = patient_data["blanket"]
         distance = patient_data["distance"]
         breathing_status = patient_data["breathing"]
-        patient_id = get_patient_id(alias, blanket_status, breathing_status, distance, index)
+        patient_id = get_patient_id(alias, blanket_status, distance, breathing_status, index)
 
         # Initialize patient_video_data with the required fields
         patient_video_data = {key: patient_data.get(key) for key in DESIRED_VIDEO_DATA}
