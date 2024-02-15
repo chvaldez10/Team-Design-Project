@@ -60,3 +60,22 @@ def run_video_to_frame(video_path: str, save_folder: str, frame_frequency: dict,
     print(f"\nDone in {end_time - start_time} seconds.")
 
     return [frame_counters[key] for key in ['set', 'save', 'true']]
+
+def process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id):
+    """
+    Converts a video to frames based on specified parameters.
+
+    Args:
+    - video_path (str): Path to the video file.
+    - frames_folder (str): Path to the folder to save the frames.
+    - frames_to_pick (list): List of frames to pick from the video.
+    - new_fps (int): The new frames per second.
+    - patient_id (str): The patient's identifier.
+
+    Prints:
+    - Information about the frame processing.
+    """
+    frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
+    set_counter, save_counter, true_frames = run_video_to_frame(video_path, frames_folder, frame_frequency, new_fps, patient_id, False)
+    print(f"\nSet counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n"+ "-"*50)
+    find_corrupted_png_files(frames_folder)

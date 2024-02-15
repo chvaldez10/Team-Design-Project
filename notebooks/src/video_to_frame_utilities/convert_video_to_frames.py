@@ -1,5 +1,9 @@
 from itertools import product
 
+from importlib import reload
+import src.video_to_frame_utilities.process_patient
+reload(src.video_to_frame_utilities.process_patient)
+
 from src.video_to_frame_utilities.process_patient import process_patient
 from src.video_to_frame_utilities.video_conversion_config import VideoConversionConfig
 
@@ -24,6 +28,6 @@ def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
         for video_id, video_data in video_data.items():
             try:
                 print(f"  processing {video_id}: {video_data}")
-                # process_patient()
+                process_patient(video_id, video_data, config.frame_rate_config.new_fps)
             except KeyError as e:
                 print(f"Key error accessing metadata: {video_id}")

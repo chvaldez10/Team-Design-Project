@@ -1,37 +1,10 @@
-import traceback
-import pandas as pd
-from typing import List
-import os
+from importlib import reload
+import src.video_to_frame_utilities.frame_sampler
+reload(src.video_to_frame_utilities.frame_sampler)
 
-# def process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id):
-#     """
-#     Converts a video to frames based on specified parameters.
+from src.video_to_frame_utilities.frame_sampler import resample_and_validate_frames
 
-#     Args:
-#     - video_path (str): Path to the video file.
-#     - frames_folder (str): Path to the folder to save the frames.
-#     - frames_to_pick (list): List of frames to pick from the video.
-#     - new_fps (int): The new frames per second.
-#     - patient_id (str): The patient's identifier.
-
-#     Prints:
-#     - Information about the frame processing.
-#     """
-#     frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
-#     set_counter, save_counter, true_frames = run_video_to_frame(video_path, frames_folder, frame_frequency, new_fps, patient_id, False)
-#     print(f"\nSet counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n"+ "-"*50)
-#     find_corrupted_png_files(frames_folder)
-
-# def resample_and_validate_frames(old_fps, new_fps):
-#     """
-#     Resamples frames based on old and new fps, and validates the frame count.
-#     """
-#     frames_to_pick = resample_frames(old_fps, new_fps, 1)
-#     if len(frames_to_pick) != new_fps:
-#         raise ValueError("Number of frames to pick is not equal to new fps")
-#     return frames_to_pick
-
-def process_patient(video_id: str, video_data: dict):
+def process_patient(video_id: str, video_data: dict, new_fps:int):
     """
     Processes the video-to-frame conversion for a single patient.
     """
@@ -39,8 +12,8 @@ def process_patient(video_id: str, video_data: dict):
     old_fps = int(video_data["old fps"])
 
     frames_to_pick = resample_and_validate_frames(old_fps, new_fps)
+    print(f"picking frames {frames_to_pick}")
     
-    # patient_id = ""
-    # process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id)
+    process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id)
     # check_drive_usage(user_drive)
     # return frames_folder
