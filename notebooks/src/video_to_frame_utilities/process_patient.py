@@ -22,22 +22,6 @@ import os
 #     print(f"\nSet counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n"+ "-"*50)
 #     find_corrupted_png_files(frames_folder)
 
-# def get_video_frame_paths(local_path: str, level: str) -> List[str]:
-#     """
-#     Constructs and returns paths related to video frames.
-
-#     Parameters:
-#     local_path (str): The local file path of the video.
-#     level (str): The detail level for the frames.
-
-#     Returns:
-#     List[str]: A list containing the folder path for frames and the video folder path.
-#     """
-#     video_folder, video_filename_with_ext = os.path.split(local_path)
-#     video_filename = os.path.splitext(video_filename_with_ext)[0]
-#     folder_path = os.path.join(video_folder, f"frames_{video_filename}_{level}")
-#     return [folder_path, video_folder]
-
 # def resample_and_validate_frames(old_fps, new_fps):
 #     """
 #     Resamples frames based on old and new fps, and validates the frame count.
@@ -47,17 +31,16 @@ import os
 #         raise ValueError("Number of frames to pick is not equal to new fps")
 #     return frames_to_pick
 
-def process_patient(patient_info, level, new_fps, user_drive, visited_folders):
+def process_patient(video_id: str, video_data: dict):
     """
     Processes the video-to-frame conversion for a single patient.
     """
-    video_path = patient_info["local path"]
-    old_fps = int(patient_info["old fps"])
-
-    frames_folder, video_folder = get_video_frame_paths(video_path, level)
+    video_path = video_data["local path"]
+    old_fps = int(video_data["old fps"])
 
     frames_to_pick = resample_and_validate_frames(old_fps, new_fps)
-    patient_id = ""
-    process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id)
-    check_drive_usage(user_drive)
-    return frames_folder
+    
+    # patient_id = ""
+    # process_video_frames(video_path, frames_folder, frames_to_pick, new_fps, patient_id)
+    # check_drive_usage(user_drive)
+    # return frames_folder
