@@ -1,17 +1,22 @@
 from itertools import product
 
+from importlib import reload
+import src.video_to_frame_utilities.video_conversion_config
+reload(src.video_to_frame_utilities.video_conversion_config)
+from src.video_to_frame_utilities.video_conversion_config import VideoConversionConfig
+
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
-def video_to_frames_driver(rgb_metadata: dict, client_schema: dict, blanket_statuses: list, distance_measures: list, new_fps_string: str, new_fps: int, user_drive: str) -> list[str]:
+def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
     """
     Driver code to converts videos of multiple patients to frames.
     """
     visited_folders = {}
     video_folder_list = []
 
-    for blanket_status, distance, breathing_label in product(blanket_statuses, distance_measures, BREATHING_LABELS):
+    for blanket_status, distance, breathing_label in product(config.blanket_statuses, config.distance_measures, BREATHING_LABELS):
         try:
-            video_data = rgb_metadata[blanket_status][distance][breathing_label]
+            video_data = config.rgb_metadata[blanket_status][distance][breathing_label]
             
             if not video_data:
                 continue
