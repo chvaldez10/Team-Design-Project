@@ -20,7 +20,7 @@ Automated scripts to create dataset from video files 🎥.
     - .env
     - log_filenames.ipynb 📊
     - log_file_to_json.ipynb 📊
-    - tools.ipynb 📊
+    - get_metadata.ipynb 📊
     - video_to_frames (not ready) 📊
   - **records/** 📚
     - **JSON/** 📄
