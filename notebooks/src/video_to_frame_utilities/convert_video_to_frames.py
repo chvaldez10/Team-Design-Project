@@ -1,16 +1,26 @@
+from itertools import product
+
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
-def video_to_frames_driver(rgb_metadata: dict, client_schema: dict, blanket_status: list, distances: list, new_fps_string: str, new_fps: int, user_drive: str) -> list[str]:
+def video_to_frames_driver(rgb_metadata: dict, client_schema: dict, blanket_statuses: list, distance_measures: list, new_fps_string: str, new_fps: int, user_drive: str) -> list[str]:
     """
     Driver code to converts videos of multiple patients to frames.
     """
     visited_folders = {}
     video_folder_list = []
 
-    for blanket in blanket_status:
-        for distance in distances:
-            for patient_id, patient_data in rgb_metadata[blanket][distance].items():
-                print(patient_data)
+    for blanket_status, distance, breathing_label in product(blanket_statuses, distance_measures, BREATHING_LABELS):
+        try:
+            video_data = rgb_metadata[blanket_status][distance][breathing_label]
+            
+            if not video_data:
+                continue
+            
+            print(f"Metadata for {blanket_status}, {distance}, {breathing_label}:")
+            for key, value in video_data.items():
+                print(f"  {key}: {value}")
+        except KeyError as e:
+            print(f"Key error accessing metadata: {e}")
 
     # for blanket_status in all_patients.items():
     #     try:
