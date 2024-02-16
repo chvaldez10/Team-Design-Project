@@ -1,22 +1,38 @@
+import pandas as pd
 from importlib import reload
-import src.video_to_frame_utilities.frame_sampler
-reload(src.video_to_frame_utilities.frame_sampler)
-import src.video_to_frame_utilities.process_frames
-reload(src.video_to_frame_utilities.process_frames)
+
+import src.video_to_frame_utilities.frame_sampler as frame_sampler
+import src.video_to_frame_utilities.process_frames as process_frames
+import src.video_to_frame_utilities.frames_conversion_config as frames_conversion_config
+
+reload(frame_sampler)
+reload(process_frames)
+reload(frames_conversion_config)
 
 from src.video_to_frame_utilities.frame_sampler import resample_and_validate_frames
-from src.video_to_frame_utilities.process_frames import process_video_frames
+from src.video_to_frame_utilities.process_frames import video_to_frame
+from src.video_to_frame_utilities.frames_conversion_config import FrameConversionConfig
 
-def process_patient(video_id: str, video_data: dict, new_fps:int):
+# Global constants
+DEBUGGING_MODE = True
+CROP_COORDINATES = [700.4810791015625, 300, 1766.735595703125, 1080.0]
+
+def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: int):
     """
     Processes the video-to-frame conversion for a single patient.
     """
-    video_path = video_data["local path"]
+    local_video_path = video_data["local path"]
     old_fps = int(video_data["old fps"])
-
     frames_to_pick = resample_and_validate_frames(old_fps, new_fps)
-    print(f"picking frames {frames_to_pick}")
+    frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
+    print(f"  Picking frames {frames_to_pick}")
     
-    process_video_frames(video_path, video_id, frames_to_pick, new_fps)
+    config = FrameConversionConfig(root_path, local_video_path, video_id, frame_frequency, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
+    
+    set_counter, save_counter, true_frames = video_to_frame(config)
+
+    print(f"  Set counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n" + "-"*50)
+
     # check_drive_usage(user_drive)
+    # find_corrupted_png_files(frames_folder)
     # return frames_folder
