@@ -37,14 +37,14 @@ def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: in
     frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
     
     # load values
-    config = FrameConversionConfig(root_path, local_video_path, video_id, frame_frequency, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
+    config = FrameConversionConfig(root_path, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
 
     # call vid to frames
     set_counter, save_counter, true_frames = video_to_frame(config)
 
     print(f"  Set counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n" + "-"*50)
 
-    print(str(config))
+    # print(str(config))
 
     # check_drive_usage(user_drive)
     # find_corrupted_png_files(frames_folder)

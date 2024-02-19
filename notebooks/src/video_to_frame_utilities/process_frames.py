@@ -1,4 +1,5 @@
 import cv2
+import os
 from timeit import default_timer as timer
 import pandas as pd
 
@@ -11,22 +12,22 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
     Converts a video into frames based on specified frequencies and saves them to a folder.
     """
     
-    # video = cv2.VideoCapture(video_path)
-    # if not video.isOpened():
-    #     raise IOError(f"Cannot open video file at {video_path}")
+    # assign paths
+    video_path = os.path.normpath(config.root_path + config.local_video_path)
+    save_folder = ""
 
-    # # Extract video metadata
-    # vid_fps = int(video.get(cv2.CAP_PROP_FPS))
-    # frame_count = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-    # video_duration = frame_count // vid_fps
 
-    # # Prepare frame list and variables
-    # frames_to_pick = list(frame_frequency.keys())
-    # expected_frame_count = new_fps * video_duration
-    # frame_counters = {'pick': 0, 'save': 0, 'set': 0, 'true': 0}
+    video = cv2.VideoCapture(video_path)
+    if not video.isOpened():
+        raise IOError(f"Cannot open video file at {video_path}")
 
-    # # Print initial processing information
-    # print(f"\nSaving frames to: {save_folder}\nPicking frames: {frames_to_pick} per set\nExpected number of frames: {expected_frame_count} ({new_fps}FPS * {video_duration}s).")
+    # Prepare frame list and variables
+    frames_to_pick = list(config.frame_frequency.keys())
+    expected_frame_count = config.new_fps * config.video_duration
+    frame_counters = {'pick': 0, 'save': 0, 'set': 0, 'true': 0}
+
+    # Print initial processing information
+    print(f"\nSaving frames to: {save_folder}\nPicking frames: {frames_to_pick} per set\nExpected number of frames: {expected_frame_count} ({config.new_fps}FPS * {config.video_duration}s).")
 
     # # Ensure save folder is ready
     # set_folder(save_folder)

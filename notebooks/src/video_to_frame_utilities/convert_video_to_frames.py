@@ -18,6 +18,8 @@ def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
 
     new_fps = config.frame_rate_config.new_fps
     root_path = config.root_path
+    export_path_local = config.local_export_path
+    export_path_remote = config.remote_export_path
 
     for blanket_status, distance, breathing_label in product(config.blanket_statuses, config.distance_measures, BREATHING_LABELS):
         video_data = config.rgb_metadata[blanket_status][distance][breathing_label]
@@ -30,12 +32,9 @@ def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
 
         for video_id, video_data in video_data.items():
             try:
-                print(f"  processing {video_id}: {video_data}")
                 # setup video conversion
                 process_patient(root_path, video_id, video_data, new_fps)
             except KeyError as e:
                 print(f"Key error accessing metadata: {video_id}")
-
-            break # delete after testing
-
-        break # delete after testing
+            break  # delete after testing
+        break  # delete after testing
