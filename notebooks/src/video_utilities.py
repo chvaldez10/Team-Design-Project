@@ -1,3 +1,4 @@
+from src.id_utilities import get_alias
 import cv2
 import os
 from typing import Dict, List, Tuple
@@ -8,7 +9,7 @@ import src.id_utilities
 reload(src.id_utilities)
 
 # import custom functions
-from src.id_utilities import get_alias
+
 
 def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10):
     """
@@ -23,14 +24,16 @@ def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10
     None. Outputs a video file at the specified path.
     """
     try:
-        png_files = sorted([f for f in os.listdir(png_folder) if f.endswith('.png')])
+        png_files = sorted(
+            [f for f in os.listdir(png_folder) if f.endswith('.png')])
         if not png_files:
             print(f"No PNG files found in the folder '{png_folder}'.")
             return
 
         first_image = cv2.imread(os.path.join(png_folder, png_files[0]))
         if first_image is None:
-            raise IOError(f"Failed to read the first image from '{png_folder}'.")
+            raise IOError(
+                f"Failed to read the first image from '{png_folder}'.")
 
         height, width, _ = first_image.shape
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
@@ -39,12 +42,14 @@ def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10
             for png_file in png_files:
                 img = cv2.imread(os.path.join(png_folder, png_file))
                 if img is None:
-                    raise IOError(f"Failed to read '{png_file}' from '{png_folder}'.")
+                    raise IOError(
+                        f"Failed to read '{png_file}' from '{png_folder}'.")
                 out.write(img)
 
         print(f"Video successfully created at '{output_video_path}'.")
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 def get_video_properties(mp4_file: str) -> Tuple:
     """
@@ -71,7 +76,8 @@ def get_video_properties(mp4_file: str) -> Tuple:
         print(f"{type(e).__name__} occurred while processing {mp4_file}: {e}")
         return None
 
-def add_video_properties(root_path:str, metadata: List[Dict], camera: str) -> List[Dict]:
+
+def add_video_properties(root_path: str, metadata: List[Dict], camera: str) -> List[Dict]:
     """
     Enhances patient metadata with video properties and alias based on camera type.
 
@@ -83,21 +89,36 @@ def add_video_properties(root_path:str, metadata: List[Dict], camera: str) -> Li
     dict: The enriched metadata with added video properties and aliases.
     """
     enriched_metadata = []
+    # Define alias IDs for train, validation, and test
+    train_ID = ["15", "5", "9", "11", "14",
+                "6", "13", "18", "17", "16", "3", "1"]
+    val_ID = ["7", "4", "12"]
+    test_ID = ["8", "2"]
 
     for patient_id, patient_info in enumerate(metadata):
         try:
             video_path = root_path + patient_info.get("local path")
             if not video_path:
-                raise ValueError(f"Missing 'local path' for patient ID {patient_info['ID']}")
+                raise ValueError(
+                    f"Missing 'local path' for patient ID {patient_info['ID']}")
 
             frames, fps, length_in_seconds = get_video_properties(video_path)
             alias = get_alias(patient_info, camera)
+
+            # Split data based on client
+            if alias in train_ID:
+                set_value = 'Train'
+            elif alias in val_ID:
+                set_value = 'Validation'
+            elif alias in test_ID:
+                set_value = 'Test'
 
             patient_info.update({
                 "frames": frames,
                 "old fps": fps,
                 "length": length_in_seconds,
-                "alias": alias
+                "alias": alias,
+                "set": set_value
             })
 
             enriched_metadata.append(patient_info)

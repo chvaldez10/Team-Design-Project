@@ -1,3 +1,4 @@
+from src.id_utilities import get_patient_id
 import json
 from typing import List, Dict
 import copy
@@ -8,7 +9,6 @@ import src.id_utilities
 reload(src.id_utilities)
 
 # import custom functions
-from src.id_utilities import get_patient_id
 
 CLIENT_SCHEMA = {
     "Without Blankets": {
@@ -33,7 +33,9 @@ CLIENT_SCHEMA = {
     },
 }
 
-DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "local path", "first name", "filename"]
+DESIRED_VIDEO_DATA = ["frames", "length", "old fps",
+                      "local path", "first name", "filename", "set"]
+
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
     """
@@ -52,6 +54,7 @@ def switch_dictionary_values(key1: str, key2: str, patient_information: list) ->
     """
     for patient in patient_information:
         patient[key1], patient[key2] = patient[key2], patient[key1]
+
 
 def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
     """
@@ -73,10 +76,12 @@ def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
         blanket_status = patient_data["blanket"]
         distance = patient_data["distance"]
         breathing_status = patient_data["breathing"]
-        patient_id = get_patient_id(alias, blanket_status, distance, breathing_status, index)
+        patient_id = get_patient_id(
+            alias, blanket_status, distance, breathing_status, index)
 
         # Initialize patient_video_data with the required fields
-        patient_video_data = {key: patient_data.get(key) for key in DESIRED_VIDEO_DATA}
+        patient_video_data = {key: patient_data.get(
+            key) for key in DESIRED_VIDEO_DATA}
 
         if blanket_status in new_structures and distance in new_structures[blanket_status] and breathing_status in new_structures[blanket_status][distance]:
             new_structures[blanket_status][distance][breathing_status][patient_id] = patient_video_data
