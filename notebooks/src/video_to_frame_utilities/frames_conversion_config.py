@@ -1,6 +1,7 @@
 class FrameConversionConfig:
-    def __init__(self, rooth_path:str, local_video_path: str, video_id: str, frame_frequency: dict, video_duration: int, new_fps: int, crop_coordinates: list, debug_mode: bool):
-        self.root_path = rooth_path
+    def __init__(self, root_path: str, set_flag: str, local_video_path: str, video_id: str, frame_frequency: dict, video_duration: int, new_fps: int, crop_coordinates: list, debug_mode: bool):
+        self.root_path = root_path
+        self.set_flag = set_flag
         self.local_video_path = local_video_path
         self.video_id = video_id
         self.frame_frequency = frame_frequency
@@ -10,4 +11,6 @@ class FrameConversionConfig:
         self.debug_mode = debug_mode
 
     def __str__(self):
-        return f"FrameConversionConfig(root_path={self.root_path}, local_video_path={self.local_video_path}, video_id={self.video_id}, frame_frequency={self.frame_frequency}, new_fps={self.new_fps}, crop_coordinates={self.crop_coordinates}, debug_mode={self.debug_mode})"
+        attrs = vars(self)
+        attrs_str = ", ".join(f"{k}={v!r}" for k, v in attrs.items())
+        return f"{self.__class__.__name__}({attrs_str})"

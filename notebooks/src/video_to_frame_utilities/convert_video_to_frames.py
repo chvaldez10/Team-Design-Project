@@ -10,7 +10,7 @@ from src.metadata_utilities import calculate_video_duration
 
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
-def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
+def video_to_frames_driver(config: VideoConversionConfig, location_flag: str) -> list[str]:
     """
     Driver code to converts videos of multiple patients to frames.
     """
@@ -29,7 +29,6 @@ def video_to_frames_driver(config: VideoConversionConfig) -> list[str]:
             continue
         
         print(f"Metadata for {blanket_status}, {distance}, {breathing_label}:")
-
         for video_id, video_data in video_data.items():
             try:
                 # setup video conversion

@@ -30,6 +30,7 @@ def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: in
     video_duration = calculate_video_duration(old_fps, frame_count)
 
     # local path
+    set_flag = video_data["set"]
     local_video_path = video_data["local path"]
     
     # frame data
@@ -37,8 +38,7 @@ def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: in
     frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
     
     # load values
-    config = FrameConversionConfig(root_path, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
-
+    config = FrameConversionConfig(root_path, set_flag, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
     # call vid to frames
     set_counter, save_counter, true_frames = video_to_frame(config)
 
