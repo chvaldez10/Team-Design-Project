@@ -3,7 +3,7 @@ import numpy as np
 
 def resample_frames(old_fps: int, new_fps: int, start: int) -> List[int]:
     """
-    Resamples the number of frames from an old frame rate to a new frame rate. 
+    Resamples the number of frames from an old frame rate to a new frame rate.
     
     This function can handle both upsampling and downsampling frames.
     """

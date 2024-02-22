@@ -40,6 +40,6 @@ def video_to_frames_driver(config: VideoConversionConfig, location_flag: str) ->
                 new_export_path = os.path.normpath(export_path+video_label)
                 process_patient(root_path, new_export_path, video_id, video_data, new_fps)
             except KeyError as e:
-                print(f"Key error accessing metadata: {video_id}")
+                print(f"  Key error accessing metadata: {video_id}")
             break  # delete after testing
         break  # delete after testing
