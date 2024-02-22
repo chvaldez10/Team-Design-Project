@@ -1,4 +1,5 @@
 from itertools import product
+import os
 
 from importlib import reload
 import src.video_to_frame_utilities.process_patient
@@ -25,17 +26,19 @@ def video_to_frames_driver(config: VideoConversionConfig, location_flag: str) ->
         export_path = config.remote_export_path
 
     for blanket_status, distance, breathing_label in product(config.blanket_statuses, config.distance_measures, BREATHING_LABELS):
+        # skip if metadata is empty
         video_data = config.rgb_metadata[blanket_status][distance][breathing_label]
         
-        # skip if metadata is empty
         if not video_data:
             continue
         
-        print(f"Metadata for {blanket_status}, {distance}, {breathing_label}:")
+        print(f"  Processing labels for {blanket_status} {distance} {breathing_label}\n")
         for video_id, video_data in video_data.items():
             try:
                 # setup video conversion
-                process_patient(root_path, export_path, video_id, video_data, new_fps)
+                video_label = "/".join(["", video_data["set"], blanket_status, distance, breathing_label])
+                new_export_path = os.path.normpath(export_path+video_label)
+                process_patient(root_path, new_export_path, video_id, video_data, new_fps)
             except KeyError as e:
                 print(f"Key error accessing metadata: {video_id}")
             break  # delete after testing

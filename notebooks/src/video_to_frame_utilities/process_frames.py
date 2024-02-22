@@ -2,10 +2,14 @@ import cv2
 import os
 from timeit import default_timer as timer
 import pandas as pd
+from importlib import reload
+
+import src.video_to_frame_utilities.save_frame as save_Frame
+reload(save_Frame)
 
 from src.video_to_frame_utilities.frames_conversion_config import FrameConversionConfig
-
-DEBUGGING_MODE = True
+from src.folder_utilities import set_folder
+from src.video_to_frame_utilities.save_frame import save_frame, update_counters, validate_frame_count
 
 def video_to_frame(config: FrameConversionConfig) -> list[int]:
     """
@@ -14,46 +18,46 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
     
     # assign paths
     video_path = os.path.normpath(config.root_path + config.local_video_path)
-    save_folder = ""
-
+    save_folder = os.path.normpath(config.export_path + "/" + config.video_id)
     video = cv2.VideoCapture(video_path)
+    
     if not video.isOpened():
         raise IOError(f"Cannot open video file at {video_path}")
 
     # Prepare frame list and variables
     frames_to_pick = list(config.frame_frequency.keys())
     expected_frame_count = config.new_fps * config.video_duration
-    frame_counters = {'pick': 0, 'save': 0, 'set': 0, 'true': 0}
+    frame_counters = {"pick": 0, "save": 0, "set": 0, "true": 0}
 
     # Print initial processing information
-    print(f"\nSaving frames to: {save_folder}\nPicking frames: {frames_to_pick} per set\nExpected number of frames: {expected_frame_count} ({config.new_fps}FPS * {config.video_duration}s).")
+    print(f"  Saving frames to: {save_folder}\n  Picking frames: {frames_to_pick} per set\n  Expected number of frames: {expected_frame_count} ({config.new_fps}FPS * {config.video_duration}s).")
 
-    # # Ensure save folder is ready
-    # set_folder(save_folder)
+    # Ensure save folder is ready
+    set_folder(save_folder)
 
-    # # Process video
-    # start_time = timer()
-    # while frame_counters['set'] < video_duration:
-    #     success, frame = video.read()
-    #     if not success:
-    #         break
+    # Process video
+    start_time = timer()
+    while frame_counters["set"] < config.video_duration:
+        success, frame = video.read()
+        if not success:
+            break
 
-    #     if frame_counters['pick'] in frames_to_pick:
-    #         save_frame(video, frame, frame_frequency, frame_counters, patient_id, save_folder)
+        if frame_counters["pick"] in frames_to_pick:
+            save_frame(video, frame, config.frame_frequency, frame_counters, config.video_id, save_folder)
 
-    #     update_counters(frame_counters, vid_fps)
+        update_counters(frame_counters, config.old_fps)
 
-    #     # for testing
-    #     if frame_counters['true'] > FRAME_LIMIT and debug_mode:
-    #         print(f"\nLimit set to {FRAME_LIMIT} frames for testing purposes.")
-    #         break
+        # for testing
+        if frame_counters["true"] > config.frame_limit and config.debug_mode:
+            print(f"\n  Limit set to {config.frame_limit} frames for testing purposes.")
+            break
 
-    # video.release()
+    video.release()
 
-    # # Post-processing validation and timing
-    # end_time = timer()
-    # validate_frame_count(frame_counters['save'], expected_frame_count)
-    # print(f"\nDone in {end_time - start_time} seconds.")
+    # Post-processing validation and timing
+    end_time = timer()
+    validate_frame_count(frame_counters["save"], expected_frame_count)
+    print(f"\n  Done in {end_time - start_time} seconds.")
 
-    # return [frame_counters[key] for key in ['set', 'save', 'true']]
+    return [frame_counters[key] for key in ["set", "save", "true"]]
     return [0, 0, 0]

@@ -27,7 +27,7 @@ def create_folders_from_schema(client_schema: dict, base_path: str) -> None:
         for distance, conditions in distances.items():
             for condition in conditions.keys():
                 # Create a test file for each condition
-                dir_path = export_path / blanket_status / distance/ condition
+                dir_path = export_path / blanket_status / distance / condition
 
                 # Create a directory for the condition
                 dir_path.mkdir(parents=True, exist_ok=True)

@@ -18,6 +18,7 @@ from src.metadata_utilities import calculate_video_duration
 
 # Global constants
 DEBUGGING_MODE = True
+FRAME_LIMIT = 100
 CROP_COORDINATES = [700.4810791015625, 300, 1766.735595703125, 1080.0]
 
 def process_patient(root_path: str, export_path: str, video_id: str, video_data: dict, new_fps: int):
@@ -38,13 +39,14 @@ def process_patient(root_path: str, export_path: str, video_id: str, video_data:
     frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
     
     # load values
-    config = FrameConversionConfig(root_path, export_path, set_flag, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
+    config = FrameConversionConfig(root_path, export_path, local_video_path, video_id, frame_frequency, video_duration, old_fps, new_fps, CROP_COORDINATES, DEBUGGING_MODE, FRAME_LIMIT)
+
     # call vid to frames
     set_counter, save_counter, true_frames = video_to_frame(config)
 
     print(f"  Set counter: {set_counter}, save counter: {save_counter}, frame counter: {true_frames}\n\n" + "-"*50)
 
-    # print(str(config))
+    # print(config)
 
     # check_drive_usage(user_drive)
     # find_corrupted_png_files(frames_folder)
