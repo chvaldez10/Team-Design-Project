@@ -16,7 +16,6 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
     video_path = os.path.normpath(config.root_path + config.local_video_path)
     save_folder = ""
 
-
     video = cv2.VideoCapture(video_path)
     if not video.isOpened():
         raise IOError(f"Cannot open video file at {video_path}")

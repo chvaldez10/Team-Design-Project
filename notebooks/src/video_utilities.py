@@ -8,7 +8,11 @@ from importlib import reload
 import src.id_utilities
 reload(src.id_utilities)
 
-# import custom functions
+# Define alias IDs for train, validation, and test
+TRAIN_ID = ["15", "5", "9", "11", "14",
+            "6", "13", "18", "17", "16", "3", "1"]
+VAL_ID = ["7", "4", "12"]
+TEST_ID = ["8", "2"]
 
 
 def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10):
@@ -90,28 +94,24 @@ def add_video_properties(root_path: str, metadata: List[Dict], camera: str) -> L
     """
     enriched_metadata = []
     # Define alias IDs for train, validation, and test
-    train_ID = ["15", "5", "9", "11", "14",
-                "6", "13", "18", "17", "16", "3", "1"]
-    val_ID = ["7", "4", "12"]
-    test_ID = ["8", "2"]
 
     for patient_id, patient_info in enumerate(metadata):
         try:
             video_path = root_path + patient_info.get("local path")
             if not video_path:
                 raise ValueError(
-                    f"Missing 'local path' for patient ID {patient_info['ID']}")
+                    f"Missing 'local path' for patient ID {patient_info['first name']}_{patient_id}")
 
             frames, fps, length_in_seconds = get_video_properties(video_path)
             alias = get_alias(patient_info, camera)
 
-            # Split data based on client
-            if alias in train_ID:
-                set_value = 'Train'
-            elif alias in val_ID:
-                set_value = 'Validation'
-            elif alias in test_ID:
-                set_value = 'Test'
+            # Split data based on client id
+            if alias in TRAIN_ID:
+                set_value = "Train"
+            elif alias in VAL_ID:
+                set_value = "Validation"
+            elif alias in TEST_ID:
+                set_value = "Test"
 
             patient_info.update({
                 "frames": frames,
