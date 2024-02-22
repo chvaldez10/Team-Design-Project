@@ -17,7 +17,7 @@ from src.video_to_frame_utilities.frames_conversion_config import FrameConversio
 from src.metadata_utilities import calculate_video_duration
 
 # Global constants
-DEBUGGING_MODE = True
+DEBUGGING_MODE = False
 FRAME_LIMIT = 100
 CROP_COORDINATES = [700.4810791015625, 300, 1766.735595703125, 1080.0]
 
