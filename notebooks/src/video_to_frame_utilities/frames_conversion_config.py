@@ -1,6 +1,7 @@
 class FrameConversionConfig:
-    def __init__(self, root_path: str, set_flag: str, local_video_path: str, video_id: str, frame_frequency: dict, video_duration: int, new_fps: int, crop_coordinates: list, debug_mode: bool):
+    def __init__(self, root_path: str, export_path: str, set_flag: str, local_video_path: str, video_id: str, frame_frequency: dict, video_duration: int, new_fps: int, crop_coordinates: list, debug_mode: bool):
         self.root_path = root_path
+        self.export_path = export_path
         self.set_flag = set_flag
         self.local_video_path = local_video_path
         self.video_id = video_id

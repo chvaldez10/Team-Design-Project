@@ -20,7 +20,7 @@ from src.metadata_utilities import calculate_video_duration
 DEBUGGING_MODE = True
 CROP_COORDINATES = [700.4810791015625, 300, 1766.735595703125, 1080.0]
 
-def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: int):
+def process_patient(root_path: str, export_path: str, video_id: str, video_data: dict, new_fps: int):
     """
     Processes the video-to-frame conversion for a single patient.
     """
@@ -38,7 +38,7 @@ def process_patient(root_path: str, video_id: str, video_data: dict, new_fps: in
     frame_frequency = pd.Index(frames_to_pick, name="frames").value_counts()
     
     # load values
-    config = FrameConversionConfig(root_path, set_flag, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
+    config = FrameConversionConfig(root_path, export_path, set_flag, local_video_path, video_id, frame_frequency, video_duration, new_fps, CROP_COORDINATES, DEBUGGING_MODE)
     # call vid to frames
     set_counter, save_counter, true_frames = video_to_frame(config)
 
