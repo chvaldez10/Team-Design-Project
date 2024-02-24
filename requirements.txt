@@ -5,3 +5,5 @@ matplotlib
 scikit-learn
 python-dotenv
 openpyxl
+nbconvert
+nbclient
