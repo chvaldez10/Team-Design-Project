@@ -66,6 +66,7 @@ Thumbs.db
 # metadata
 *.log
 *.xlsx
+*.json
 
 # Database
 *.sqlite
