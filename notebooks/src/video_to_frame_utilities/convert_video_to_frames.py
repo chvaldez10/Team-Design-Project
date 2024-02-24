@@ -7,7 +7,6 @@ reload(src.video_to_frame_utilities.process_patient)
 
 from src.video_to_frame_utilities.process_patient import process_patient
 from src.video_to_frame_utilities.video_conversion_config import VideoConversionConfig
-from src.metadata_utilities import calculate_video_duration
 
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
@@ -32,7 +31,7 @@ def video_to_frames_driver(config: VideoConversionConfig, location_flag: str) ->
         if not video_data:
             continue
         
-        print(f"  Processing labels for {blanket_status} {distance} {breathing_label}\n")
+        print(f"  Processing labels for {blanket_status} {distance} {breathing_label}\n  " + "-"*77)
         for video_id, video_data in video_data.items():
             try:
                 # setup video conversion
@@ -41,5 +40,3 @@ def video_to_frames_driver(config: VideoConversionConfig, location_flag: str) ->
                 process_patient(root_path, new_export_path, video_id, video_data, new_fps)
             except KeyError as e:
                 print(f"  Key error accessing metadata: {video_id}")
-            break  # delete after testing
-        break  # delete after testing

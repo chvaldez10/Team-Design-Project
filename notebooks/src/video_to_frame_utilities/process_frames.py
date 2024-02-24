@@ -1,6 +1,5 @@
 import cv2
 import os
-from timeit import default_timer as timer
 import pandas as pd
 from importlib import reload
 
@@ -30,13 +29,12 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
     frame_counters = {"pick": 0, "save": 0, "set": 0, "true": 0}
 
     # Print initial processing information
-    print(f"  Saving frames to: {save_folder}\n  Picking frames: {frames_to_pick} per set\n  Expected number of frames: {expected_frame_count} ({config.new_fps}FPS * {config.video_duration}s).")
+    print(f"\n  Saving frames to: {save_folder}\n  Picking frames: {frames_to_pick} per set\n  Expected number of frames: {expected_frame_count} ({config.new_fps}FPS * {config.video_duration}s).")
 
     # Ensure save folder is ready
     set_folder(save_folder)
 
     # Process video
-    start_time = timer()
     while frame_counters["set"] < config.video_duration:
         success, frame = video.read()
         if not success:
@@ -49,15 +47,11 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
 
         # for testing
         if frame_counters["true"] > config.frame_limit and config.debug_mode:
-            print(f"\n  Limit set to {config.frame_limit} frames for testing purposes.")
+            print(f"  Limit set to {config.frame_limit} frames for testing purposes.")
             break
 
     video.release()
 
     # Post-processing validation and timing
-    end_time = timer()
     validate_frame_count(frame_counters["save"], expected_frame_count)
-    print(f"\n  Done in {end_time - start_time} seconds.")
-
     return [frame_counters[key] for key in ["set", "save", "true"]]
-    return [0, 0, 0]
