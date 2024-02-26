@@ -6,7 +6,7 @@ def save_frame(video, frame, frame_frequency, counters, patient_id, folder):
     Saves a given frame to the specified folder, updating counters accordingly.
     """
     for _ in range(frame_frequency.get(counters["pick"])):
-        frame_name = f"{counters['save']}.png"
+        frame_name = f"{counters['save']}.jpg"
         cv2.imwrite(os.path.join(folder, frame_name), frame)
         counters["save"] += 1
 
