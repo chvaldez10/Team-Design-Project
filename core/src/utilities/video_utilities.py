@@ -2,6 +2,7 @@ from src.utilities.id_utilities import get_alias
 import cv2
 import os
 from typing import Dict, List, Tuple
+import re
 
 # reload for module caching
 from importlib import reload
@@ -14,41 +15,41 @@ TRAIN_ID = ["15", "5", "9", "11", "14",
 VAL_ID = ["7", "4", "12"]
 TEST_ID = ["8", "2"]
 
+def extract_number(filename: str) -> int:
+    match = re.search(r"(\d+)\.jpg$", filename)
+    if match:
+        return int(match.group(1))
+    return None
 
-def create_video_from_png(png_folder: str, output_video_path: str, fps: int = 10):
+def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int = 10):
     """
-    Creates a video from a series of PNG images in a specified folder.
-
-    Args:
-    png_folder (str): Path to the folder containing PNG images.
-    output_video_path (str): Path where the output video will be saved.
-    fps (int, optional): Frames per second of the output video. Default is 10.
-
-    Returns:
-    None. Outputs a video file at the specified path.
+    Creates a video from a series of JPG images in a specified folder.
     """
     try:
-        png_files = sorted(
-            [f for f in os.listdir(png_folder) if f.endswith('.png')])
-        if not png_files:
-            print(f"No PNG files found in the folder '{png_folder}'.")
+        frames = sorted(
+            [f for f in os.listdir(frames_folder) if f.endswith('.jpg')], key=extract_number)
+        print(frames)
+        if not frames:
+            print(f"No JPG files found in the folder '{frames_folder}'.")
             return
-
-        first_image = cv2.imread(os.path.join(png_folder, png_files[0]))
-        if first_image is None:
+        first_frame = cv2.imread(os.path.join(frames_folder, frames[0]))
+        if first_frame is None:
             raise IOError(
-                f"Failed to read the first image from '{png_folder}'.")
+                f"Failed to read the first image from '{frames_folder}'.")
 
-        height, width, _ = first_image.shape
+        height, width, _ = first_frame.shape
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-
-        with cv2.VideoWriter(output_video_path, fourcc, fps, (width, height)) as out:
-            for png_file in png_files:
-                img = cv2.imread(os.path.join(png_folder, png_file))
+        
+        out = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
+        try:
+            for jpg_file in frames:
+                img = cv2.imread(os.path.join(frames_folder, jpg_file))
                 if img is None:
                     raise IOError(
-                        f"Failed to read '{png_file}' from '{png_folder}'.")
+                        f"Failed to read '{jpg_file}' from '{frames_folder}'.")
                 out.write(img)
+        finally:
+            out.release()
 
         print(f"Video successfully created at '{output_video_path}'.")
     except Exception as e:
