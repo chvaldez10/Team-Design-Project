@@ -1,7 +1,7 @@
 from typing import Optional
 from torchvision.transforms import Compose
 
-class DatasetConfig:
+class BreathingDatasetConfig:
     def __init__(self, root_dir: str, blanket_condition: Optional[str] = None, distance: Optional[str] = None, transform: Optional[Compose] = None, max_frames: int = 100):
         self.root_dir = root_dir
         self.blanket_condition = blanket_condition

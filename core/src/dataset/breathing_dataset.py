@@ -5,14 +5,15 @@ import torch
 from torch.utils.data import Dataset
 from PIL import Image
 
-from src.dataset.breathing_dataset_config import DatasetConfig
+from src.dataset.breathing_dataset_config import BreathingDatasetConfig
+from src.utilities.list_utilities import extract_number
 
 BLANKET_STATUS = ["With Blankets", "Without Blankets"]
 DISTANCE_MEASURES = ["2 Meters", "3 Meters"]
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
 class BreathingDataset(Dataset):
-    def __init__(self, config: DatasetConfig):
+    def __init__(self, config: BreathingDatasetConfig):
         """Initializes the BreathingDataset with configuration."""
         self.root_dir = config.root_dir
         self.blanket_condition = config.blanket_condition
@@ -23,7 +24,9 @@ class BreathingDataset(Dataset):
         self._generate_samples()
 
     def _generate_samples(self) -> None:
-        """Generates samples by iterating over all combinations of conditions, distances, and labels."""
+        """
+        Generates samples by iterating over all combinations of conditions, distances, and labels.
+        """
         conditions = [self.blanket_condition] if self.blanket_condition else BLANKET_STATUS
         distances = [self.distance] if self.distance else DISTANCE_MEASURES
 
@@ -31,7 +34,9 @@ class BreathingDataset(Dataset):
             self._add_samples_for_condition_distance_label(condition, distance, label)
 
     def _add_samples_for_condition_distance_label(self, condition: str, distance: str, label: str) -> None:
-        """Adds image samples for a given condition, distance, and label."""
+        """
+        Adds image samples for a given condition, distance, and label.
+        """
         label_path = os.path.join(self.root_dir, condition, distance, label)
         for subject_path in filter(lambda p: os.path.isdir(os.path.join(label_path, p)), os.listdir(label_path)):
             subject_full_path = os.path.join(label_path, subject_path)
@@ -41,8 +46,9 @@ class BreathingDataset(Dataset):
 
     def _get_sorted_images(self, subject_path: str) -> List[str]:
         """Retrieves and sorts images in a subject's directory, limited by max_frames."""
-        images = [os.path.join(subject_path, img) for img in os.listdir(subject_path) if img.endswith(".jpg")]
-        images.sort(key=lambda x: int(os.path.basename(x).split('.')[0]))
+        frames_path = os.listdir(subject_path)
+        images = [os.path.join(subject_path, img) for img in frames_path if img.endswith(".jpg")]
+        images = sorted(images, key=extract_number)
         return images[:self.max_frames]
 
     def __len__(self) -> int:
