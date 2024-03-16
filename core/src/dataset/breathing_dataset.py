@@ -6,32 +6,30 @@ from torchvision.transforms import Compose
 from torch.utils.data import Dataset
 from PIL import Image
 
+from src.dataset.breathing_dataset_config import DatasetConfig
+
+BLANKET_STATUS = ["With Blankets", "Without Blankets"]
+DISTANCE_MEASURES = ["2 Meters", "3 Meters"]
+BREATHING_LABELS = ["Hold Breath", "Relaxed"]
+
 class BreathingDataset(Dataset):
-    def __init__(self, root_dir: str, blanket_condition: Optional[str] = None, distance: Optional[str] = None, transform: Optional[Compose] = None, max_frames: int = 100):
+    def __init__(self, config: DatasetConfig):
         """
         Initializes the dataset.
-
-        :param root_dir: Base directory for the dataset (e.g., path to 'Training').
-        :param blanket_condition: 'With Blankets' or 'Without Blankets', use None to include both.
-        :param distance: '2 Meters' or '3 Meters', use None to include both distances.
-        :param transform: Transformations to be applied to each image.
-        :param max_frames: Maximum number of frames to use from each video sequence.
         """
-        self.root_dir = root_dir
-        self.blanket_condition = blanket_condition
-        self.distance = distance
-        self.transform = transform
-        self.max_frames = max_frames
+        self.root_dir = config.root_dir
+        self.blanket_condition = config.blanket_condition
+        self.distance = config.distance
+        self.transform = config.transform
+        self.max_frames = config.max_frames
         self.samples: List[Tuple[List[str], int]] = []
 
         self._generate_samples()
 
     def _generate_samples(self) -> None:
-        conditions = ['With Blankets', 'Without Blankets'] if self.blanket_condition is None else [self.blanket_condition]
-        distances = ['2 Meters', '3 Meters'] if self.distance is None else [self.distance]
-        labels = ['Hold Breath', 'Relaxed']
-
-        for condition, dist, label in product(conditions, distances, labels):
+        conditions = BLANKET_STATUS if self.blanket_condition is None else [self.blanket_condition]
+        distances = DISTANCE_MEASURES if self.distance is None else [self.distance]
+        for condition, dist, label in product(conditions, distances, BREATHING_LABELS):
             self._add_samples_for_condition_distance_label(condition, dist, label)
 
     def _add_samples_for_condition_distance_label(self, condition: str, distance: str, label: str) -> None:
@@ -39,18 +37,17 @@ class BreathingDataset(Dataset):
         for subject_path in os.listdir(label_path):
             subject_full_path = os.path.join(label_path, subject_path)
             if os.path.isdir(subject_full_path):
-                images = sorted([img for img in os.listdir(subject_full_path) if img.endswith('.jpg')],
-                                key=lambda x: int(x.split('.')[0]))
+                images = sorted([img for img in os.listdir(subject_full_path) if img.endswith(".jpg")], key=lambda x: int(x.split(".")[0]))
                 images = images[:self.max_frames]
                 image_paths = [os.path.join(subject_full_path, img) for img in images]
-                self.samples.append((image_paths, 0 if label == 'Hold Breath' else 1))
+                self.samples.append((image_paths, 0 if label == "Hold Breath" else 1))
 
     def __len__(self) -> int:
         return len(self.samples)
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
         images_path, label = self.samples[idx]
-        images = [Image.open(img_path).convert('RGB') for img_path in images_path]
+        images = [Image.open(img_path).convert("RGB") for img_path in images_path]
 
         if self.transform:
             images = [self.transform(image) for image in images]
