@@ -3,12 +3,12 @@ import os
 import pandas as pd
 from importlib import reload
 
-import src.video_to_frame_utilities.save_frame as save_Frame
+import src.video_to_frames.save_frame as save_Frame
 reload(save_Frame)
 
-from src.video_to_frame_utilities.frames_conversion_config import FrameConversionConfig
+from src.video_to_frames.frames_conversion_config import FrameConversionConfig
+from src.video_to_frames.save_frame import save_frame, update_counters, validate_frame_count
 from src.utilities.folder_utilities import set_folder
-from src.video_to_frame_utilities.save_frame import save_frame, update_counters, validate_frame_count
 
 def video_to_frame(config: FrameConversionConfig) -> list[int]:
     """

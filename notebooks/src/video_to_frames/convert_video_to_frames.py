@@ -2,11 +2,11 @@ from itertools import product
 import os
 
 from importlib import reload
-import src.video_to_frame_utilities.process_patient
-reload(src.video_to_frame_utilities.process_patient)
+import src.video_to_frames.process_patient
+reload(src.video_to_frames.process_patient)
 
-from src.video_to_frame_utilities.process_patient import process_patient
-from src.video_to_frame_utilities.video_conversion_config import VideoConversionConfig
+from src.video_to_frames.process_patient import process_patient
+from src.video_to_frames.video_conversion_config import VideoConversionConfig
 
 BREATHING_LABELS = ["Hold Breath", "Relaxed"]
 
