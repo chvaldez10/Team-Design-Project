@@ -21,17 +21,23 @@ def extract_number(filename: str) -> int:
         return int(match.group(1))
     return None
 
-def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int = 10):
+def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int, frame_limit:int = None):
     """
     Creates a video from a series of JPG images in a specified folder.
     """
     try:
-        frames = sorted(
-            [f for f in os.listdir(frames_folder) if f.endswith('.jpg')], key=extract_number)
-        print(frames)
+        frames = sorted([frame for frame in os.listdir(frames_folder) if frame.endswith('.jpg')], key=extract_number)
+        
+        if frame_limit is not None:
+            print("Setting frame limit to", frame_limit)
+            frames = frames[:frame_limit]
+
+        # list is empty
         if not frames:
             print(f"No JPG files found in the folder '{frames_folder}'.")
             return
+        
+        # read the first frame
         first_frame = cv2.imread(os.path.join(frames_folder, frames[0]))
         if first_frame is None:
             raise IOError(
@@ -39,14 +45,13 @@ def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int =
 
         height, width, _ = first_frame.shape
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-        
         out = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
+        
         try:
             for jpg_file in frames:
                 img = cv2.imread(os.path.join(frames_folder, jpg_file))
                 if img is None:
-                    raise IOError(
-                        f"Failed to read '{jpg_file}' from '{frames_folder}'.")
+                    raise IOError(f"Failed to read '{jpg_file}' from '{frames_folder}'.")
                 out.write(img)
         finally:
             out.release()
@@ -54,7 +59,6 @@ def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int =
         print(f"Video successfully created at '{output_video_path}'.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
 
 def get_video_properties(mp4_file: str) -> Tuple:
     """
