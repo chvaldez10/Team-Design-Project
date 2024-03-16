@@ -29,7 +29,6 @@ def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int, 
         frames = sorted([frame for frame in os.listdir(frames_folder) if frame.endswith('.jpg')], key=extract_number)
         
         if frame_limit is not None:
-            print("Setting frame limit to", frame_limit)
             frames = frames[:frame_limit]
 
         # list is empty
@@ -47,6 +46,7 @@ def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int, 
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
         out = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
         
+        print(f"config: fps = {fps}, number of frames = {len(frames)}")
         try:
             for jpg_file in frames:
                 img = cv2.imread(os.path.join(frames_folder, jpg_file))
