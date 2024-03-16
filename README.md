@@ -4,7 +4,7 @@
 
 ## Description 📝
 
-Automated scripts to create dataset from video files 🎥.
+This Team Design Project for ENSF 609/610 is focused on developing a deep learning model capable of classifying breathing patterns in sleeping patients.
 
 ## Team Members 👥
 
@@ -21,7 +21,7 @@ Automated scripts to create dataset from video files 🎥.
     - log_filenames.ipynb 📊
     - log_file_to_json.ipynb 📊
     - get_metadata.ipynb 📊
-    - video_to_frames (not ready) 📊
+    - video_to_frames.ipynb 📊
   - **records/** 📚
     - **JSON/** 📄
     - **logs/** 📜
@@ -33,9 +33,9 @@ Automated scripts to create dataset from video files 🎥.
 
 ## Getting Started 🌟
 
-To install all packages, run the command `pip install -r requirements.txt` 💼
+To get started, install all the necessary packages by running `pip install -r requirements.txt` 💼
 
-Create an .env file with the following config:
+Please create a `.env` file with the following configuration:
 
 ```
 ROOT_FOLDER=
