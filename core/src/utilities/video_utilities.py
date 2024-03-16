@@ -1,25 +1,19 @@
-from src.utilities.id_utilities import get_alias
 import cv2
 import os
 from typing import Dict, List, Tuple
-import re
 
 # reload for module caching
 from importlib import reload
 import src.utilities.id_utilities
 reload(src.utilities.id_utilities)
 
+from src.utilities.id_utilities import get_alias
+from src.utilities.list_utilities import extract_number
+
 # Define alias IDs for train, validation, and test
-TRAIN_ID = ["15", "5", "9", "11", "14",
-            "6", "13", "18", "17", "16", "3", "1"]
+TRAIN_ID = ["15", "5", "9", "11", "14", "6", "13", "18", "17", "16", "3", "1"]
 VAL_ID = ["7", "4", "12"]
 TEST_ID = ["8", "2"]
-
-def extract_number(filename: str) -> int:
-    match = re.search(r"(\d+)\.jpg$", filename)
-    if match:
-        return int(match.group(1))
-    return None
 
 def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int, frame_limit:int = None):
     """
@@ -63,16 +57,6 @@ def create_video_from_jpg(frames_folder: str, output_video_path: str, fps: int, 
 def get_video_properties(mp4_file: str) -> Tuple:
     """
     Extracts properties from an MP4 video file.
-
-    Args:
-    mp4_file (str): The path to the MP4 file.
-
-    Returns:
-    tuple: A tuple containing the number of frames, frames per second (FPS),
-           and the length of the video in seconds. Returns None if an error occurs.
-
-    Raises:
-    Exception: Any exception that occurs while processing the video file.
     """
     try:
         video = cv2.VideoCapture(mp4_file)
@@ -89,13 +73,6 @@ def get_video_properties(mp4_file: str) -> Tuple:
 def add_video_properties(root_path: str, metadata: List[Dict], camera: str) -> List[Dict]:
     """
     Enhances patient metadata with video properties and alias based on camera type.
-
-    Args:
-    metadata (dict): A dictionary of patient metadata.
-    camera (str): The type of camera used ('rgb' or 'thermal').
-
-    Returns:
-    dict: The enriched metadata with added video properties and aliases.
     """
     enriched_metadata = []
     # Define alias IDs for train, validation, and test
