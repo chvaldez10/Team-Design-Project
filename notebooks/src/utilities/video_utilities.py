@@ -1,12 +1,12 @@
-from src.id_utilities import get_alias
+from src.utilities.id_utilities import get_alias
 import cv2
 import os
 from typing import Dict, List, Tuple
 
 # reload for module caching
 from importlib import reload
-import src.id_utilities
-reload(src.id_utilities)
+import src.utilities.id_utilities
+reload(src.utilities.id_utilities)
 
 # Define alias IDs for train, validation, and test
 TRAIN_ID = ["15", "5", "9", "11", "14",

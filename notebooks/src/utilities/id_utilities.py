@@ -24,16 +24,16 @@ ALIAS_ID = {
 }
 
 VIDEO_CHARACTERISTICS = {
-    "With Blankets" : "WB",
-    "B" : "WB",
-    "Without Blankets" : "WOB",
+    "With Blankets": "WB",
+    "B": "WB",
+    "Without Blankets": "WOB",
     "WOB": "WOB",
-    "3 Meters" : "3M",
-    "2 Meters" : "2M",
-    "Hold Breath" : "HB",
-    "Hold Breathe" : "HB",
-    "H" : "HB",
-    "Relaxed" : "REL",
+    "3 Meters": "3M",
+    "2 Meters": "2M",
+    "Hold Breath": "HB",
+    "Hold Breathe": "HB",
+    "H": "HB",
+    "Relaxed": "REL",
     "R": "REL",
 }
 

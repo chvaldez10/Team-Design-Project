@@ -4,17 +4,17 @@ from importlib import reload
 import src.video_to_frame_utilities.frame_sampler as frame_sampler
 import src.video_to_frame_utilities.process_frames as process_frames
 import src.video_to_frame_utilities.frames_conversion_config as frames_conversion_config
-import src.metadata_utilities
+import src.utilities.metadata_utilities as metadata_utilities
 
 reload(frame_sampler)
 reload(process_frames)
 reload(frames_conversion_config)
-reload(src.metadata_utilities)
+reload(metadata_utilities)
 
 from src.video_to_frame_utilities.frame_sampler import resample_and_validate_frames
 from src.video_to_frame_utilities.process_frames import video_to_frame
 from src.video_to_frame_utilities.frames_conversion_config import FrameConversionConfig
-from src.metadata_utilities import calculate_video_duration
+from src.utilities.metadata_utilities import calculate_video_duration
 
 # Global constants
 DEBUGGING_MODE = False

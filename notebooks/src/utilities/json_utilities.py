@@ -1,12 +1,12 @@
-from src.id_utilities import get_patient_id
+from src.utilities.id_utilities import get_patient_id
 import json
 from typing import List, Dict
 import copy
 from importlib import reload
 
 # reload for module caching
-import src.id_utilities
-reload(src.id_utilities)
+import src.utilities.id_utilities
+reload(src.utilities.id_utilities)
 
 # import custom functions
 
@@ -33,8 +33,7 @@ CLIENT_SCHEMA = {
     },
 }
 
-DESIRED_VIDEO_DATA = ["frames", "length", "old fps",
-                      "local path", "first name", "filename", "set"]
+DESIRED_VIDEO_DATA = ["frames", "length", "old fps", "local path", "first name", "filename", "set"]
 
 
 def switch_dictionary_values(key1: str, key2: str, patient_information: list) -> None:
@@ -58,7 +57,7 @@ def switch_dictionary_values(key1: str, key2: str, patient_information: list) ->
 
 def restructure_metadata(patient_metadata: List[Dict]) -> Dict:
     """
-    Restructures a list of patient metadata dictionaries to match a predefined schema, 
+    Restructures a list of patient metadata dictionaries to match a predefined schema,
     avoiding direct modification of global variables and handling missing keys gracefully.
 
     Args:

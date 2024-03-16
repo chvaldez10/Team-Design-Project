@@ -4,14 +4,14 @@ from typing import List
 from importlib import reload
 
 # reload for module caching
-import src.export_utilities
-reload(src.export_utilities)
-import src.string_utilities
-reload(src.string_utilities)
+import src.utilities.export_utilities
+reload(src.utilities.export_utilities)
+import src.utilities.string_utilities
+reload(src.utilities.string_utilities)
 
 # import custom functions
-from src.export_utilities import write_filtered_filenames_to_log
-from src.string_utilities import replace_substring_in_list
+from src.utilities.export_utilities import write_filtered_filenames_to_log
+from src.utilities.string_utilities import replace_substring_in_list
 
 def get_patient_id(curr_dir: str) -> List[str]:
     """
