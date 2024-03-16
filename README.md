@@ -15,7 +15,7 @@ This Team Design Project for ENSF 609/610 is focused on developing a deep learni
 ## Folder Structure 📂
 
 - **project_name/** 📁
-  - **notebooks/** 📓
+  - **core/** 📓
     - **src/** 💻
     - .env
     - log_filenames.ipynb 📊
