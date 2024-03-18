@@ -7,6 +7,7 @@ from PIL import Image
 
 from src.dataset.breathing_dataset_config import BreathingDatasetConfig
 from src.utilities.list_utilities import extract_number
+from src.utilities.sliding_window import get_sliding_window_indices
 
 BLANKET_STATUS = ["With Blankets", "Without Blankets"]
 DISTANCE_MEASURES = ["2 Meters", "3 Meters"]
@@ -69,3 +70,15 @@ class BreathingDataset(Dataset):
         """Loads an image, converts it to RGB, and applies transformations."""
         image = Image.open(img_path).convert("RGB")
         return self.transform(image) if self.transform else image
+
+    def sliding_window_generator(self, window_size: int, step_size: int):
+        """Yields samples within a sliding window."""
+        for images_path, label in self.samples:
+            num_frames = len(images_path)
+            if num_frames < window_size:
+                continue
+            
+            for start, end in get_sliding_window_indices(num_frames, window_size, step_size):
+                window_images_path = images_path[start:end]
+                images = [self._load_image(img_path) for img_path in window_images_path]
+                yield torch.stack(images), label
