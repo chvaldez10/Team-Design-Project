@@ -41,7 +41,7 @@ def video_to_frame(config: FrameConversionConfig) -> list[int]:
             break
 
         if frame_counters["pick"] in frames_to_pick:
-            save_frame(video, frame, config.frame_frequency, frame_counters, config.video_id, save_folder)
+            save_frame(frame, config.frame_frequency, frame_counters, save_folder, config.crop_coordinates)
 
         update_counters(frame_counters, config.old_fps)
 

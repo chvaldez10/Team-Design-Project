@@ -1,13 +1,16 @@
 import cv2
 import os
+from PIL import Image
 
-def save_frame(video, frame, frame_frequency, counters, patient_id, folder):
+def save_frame(frame, frame_frequency, counters, folder, crop_coordinates: list[float]):
     """
     Saves a given frame to the specified folder, updating counters accordingly.
     """
     for _ in range(frame_frequency.get(counters["pick"])):
         frame_name = f"{counters['save']}.jpg"
-        cv2.imwrite(os.path.join(folder, frame_name), frame)
+        img = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+        cropped_frame = img.crop(crop_coordinates)
+        cropped_frame.save(os.path.join(folder, frame_name))
         counters["save"] += 1
 
 def update_counters(counters, vid_fps):
