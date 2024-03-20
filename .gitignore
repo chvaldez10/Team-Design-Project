@@ -76,3 +76,6 @@ Thumbs.db
 
 #personal files
 del_me.*
+
+# model
+*.pth
