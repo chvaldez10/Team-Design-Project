@@ -53,8 +53,7 @@ def validate_model(model, val_loader, criterion, device):
     return avg_loss, accuracy
 
 
-def train_validate(model, train_loader, val_loader, epochs, learning_rate, best_model_path,
-                   device, patience=3, verbose=True):
+def train_validate(model: Basic3DCNN, train_loader, val_loader, epochs: int, learning_rate: float, best_model_path: str, device, patience=3, verbose=True):
     """
     Train and validate the model.
     """
