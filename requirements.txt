@@ -10,7 +10,7 @@ nbconvert
 nbclient
 torch
 pytorch-lightning
-pytorch-lightning
+torchvision
 ipykernel
 load_dotenv
 wandb

@@ -9,7 +9,6 @@
 #SBATCH --partition=gpu
 #SBATCH --gpus-per-node=1
 
-source ~/software/init-conda
-conda activate chris_env
+conda activate calgary_di
 python "/home/christian.valdez/DI-Automated-Scripts/core/3d_cnn.py"
 conda deactivate
