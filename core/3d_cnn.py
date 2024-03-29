@@ -133,6 +133,8 @@ def main():
     delta = dataset_loader_end_time - start_time
     formatted_time = str(delta).split('.')[0]
 
+    print("len train_dataset_without_blankets =", len(train_dataset_without_blankets.samples))
+
     print("Time taken to finish loading dataset: ", formatted_time)
 
     print("Starting training...")
