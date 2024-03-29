@@ -75,7 +75,7 @@ Thumbs.db
 .env
 
 #personal files
-del_me.*
+del_me*
 
 # model
 *.pth
