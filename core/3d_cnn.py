@@ -130,8 +130,10 @@ def main():
     test_loader = DataLoader(test_dataset_without_blankets, batch_size=1, shuffle=False)  # No shuffle for testing
 
     dataset_loader_end_time = datetime.datetime.now()
+    delta = dataset_loader_end_time - start_time
+    formatted_time = str(delta).split('.')[0]
 
-    print("Time taken to finish loading dataset: ", dataset_loader_end_time)
+    print("Time taken to finish loading dataset: ", formatted_time)
 
     print("Starting training...")
     
