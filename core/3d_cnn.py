@@ -7,7 +7,7 @@ from typing import List, Tuple
 from itertools import product
 from PIL import Image
 import random
-import datetime
+from datetime import datetime
 
 # Define Checkpoint Information
 model_save_dir = './model_checkpoints'
@@ -112,7 +112,7 @@ class BreathingDataset(Dataset):
 # -------------------------------------------------------------------------------- #
 
 def main():
-    start_time = datetime.datetime.now()
+    start_time = datetime.now()
 
     print("Initializing dataset and data loader ...")
 
@@ -129,7 +129,7 @@ def main():
     val_loader = DataLoader(val_dataset_without_blankets, batch_size=1, shuffle=False)  # No shuffle for validation
     test_loader = DataLoader(test_dataset_without_blankets, batch_size=1, shuffle=False)  # No shuffle for testing
 
-    dataset_loader_end_time = datetime.datetime.now()
+    dataset_loader_end_time = datetime.now()
     delta = dataset_loader_end_time - start_time
     formatted_time = str(delta).split('.')[0]
 
