@@ -7,7 +7,7 @@ from typing import List, Tuple
 from itertools import product
 from PIL import Image
 import random
-from datetime import datetime
+import datetime
 
 # Define Checkpoint Information
 model_save_dir = './model_checkpoints'
