@@ -3,7 +3,15 @@ numpy
 opencv-python
 matplotlib
 scikit-learn
+scikit-image
 python-dotenv
 openpyxl
 nbconvert
 nbclient
+torch
+pytorch-lightning
+pytorch-lightning
+ipykernel
+load_dotenv
+wandb
+Pillow
