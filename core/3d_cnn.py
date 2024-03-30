@@ -235,7 +235,7 @@ class Basic3DCNN(nn.Module):
         x = self.pool(x)
         # x = x.flatten(start_dim=1)
         x = x.view(-1,316800)
-        x = self.dropout(x)
+        # x = self.dropout(x)
         x = self.fc(x)
         return x
 
