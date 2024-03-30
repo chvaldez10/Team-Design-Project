@@ -251,9 +251,9 @@ def main():
         transforms.ToTensor(),
     ])
 
-    train_path = "E:/rgb/Train"
-    val_path = "E:/rgb/Validation"
-    test_path = "E:/rgb/Test"
+    train_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Train"
+    val_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Validation"
+    test_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Test"
 
     train_loader, val_loader, test_loader = initialize_dataset_and_loader(train_path, val_path, test_path, transform)
 
