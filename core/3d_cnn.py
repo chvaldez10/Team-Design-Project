@@ -267,7 +267,7 @@ def main():
         train_loader=train_loader,
         val_loader=val_loader,
         num_epochs=10,
-        model_save_path='E:/best_model/3d_cnn.pth',
+        model_save_path='/home/christian.valdez/DI-Automated-Scripts/best_model/3d_cnn.pth',
         patience=3,
         device=device
     )
