@@ -15,3 +15,4 @@ ipykernel
 load_dotenv
 wandb
 Pillow
+click
