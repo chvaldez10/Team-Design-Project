@@ -2,12 +2,17 @@ import re
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
+import torch.optim as optim
 import os
 from typing import List, Tuple
 from itertools import product
 from PIL import Image
 import random
 from datetime import datetime
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.optim import lr_scheduler
+import wandb
 
 # Define Checkpoint Information
 model_save_dir = './model_checkpoints'
@@ -105,6 +110,135 @@ class BreathingDataset(Dataset):
         """Applies horizontal flip to an image."""
         return torch.flip(img, dims=[2])
 
+def initialize_dataset_and_loader(train_path: str, val_path: str, test_path: str, transform: transforms.Compose) -> Tuple[DataLoader, DataLoader, DataLoader]:
+    """
+    Initializes the dataset and data loaders for training, validation, and testing.
+    """
+    start_time = datetime.now()
+    print("Initializing dataset and data loader ...")
+
+    train_dataset = BreathingDataset(train_path, blanket_condition='Without Blankets', distance=None, transform=transform)
+    val_dataset = BreathingDataset(val_path, blanket_condition='Without Blankets', distance=None, transform=transform)
+    test_dataset = BreathingDataset(test_path, blanket_condition='Without Blankets', distance=None, transform=transform)
+
+    train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=1, shuffle=False)
+    test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False)
+
+    dataset_loader_end_time = datetime.now()
+    delta = dataset_loader_end_time - start_time
+    formatted_time = str(delta).split('.')[0]
+
+    print(f"Dataset and loader initialization completed in {formatted_time}.")
+    print(f"len train_dataset_without_blankets = {len(train_dataset.samples)}")
+
+    return train_loader, val_loader, test_loader
+
+def train_model(model, train_loader: DataLoader, val_loader: DataLoader, num_epochs: int, model_save_path: str, patience: int, device: torch.device):
+    """
+    Trains a given model with specified parameters and data loaders, ensuring all data is moved to the specified device.
+    """
+    model = model.to(device)
+    lr = 0.0005
+    best_val_loss = float('inf')
+    early_stop_counter = 0
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=lr)
+    scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.6)
+
+    wandb.init(
+        project="3d-cnn-team-design",
+        name="test-run",
+        config={"learning_rate": lr, "architecture": "2d_cnn", "dataset": "calgary_di", "epochs": num_epochs}
+    )
+
+    for epoch in range(num_epochs):
+        model.train()  # Set the model to training mode
+        running_loss = 0.0
+        train_corrects = 0
+
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            optimizer.zero_grad()
+            inputs = inputs.permute(0, 2, 1, 3, 4)  # Adjust dimensions if necessary
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+
+            running_loss += loss.item()
+            _, preds = torch.max(outputs, 1)
+            train_corrects += torch.sum(preds == labels.data)
+
+        scheduler.step()  # Update learning rate
+        train_loss = running_loss / len(train_loader)
+        train_accuracy = train_corrects.double() / len(train_loader.dataset)
+        wandb.log({"epoch": epoch, "train_loss": running_loss / len(train_loader), "Train Accuracy": train_accuracy})
+
+        model.eval()  # Set the model to evaluation mode
+        val_loss = 0.0
+        val_corrects = 0
+        with torch.no_grad():
+            for inputs, labels in val_loader:
+                inputs, labels = inputs.to(device), labels.to(device)
+                inputs = inputs.permute(0, 2, 1, 3, 4)  # Adjust dimensions if necessary
+                outputs = model(inputs)
+                loss = criterion(outputs, labels)
+                val_loss += loss.item()
+                _, preds = torch.max(outputs, 1)
+                val_corrects += torch.sum(preds == labels.data)
+
+        val_loss /= len(val_loader)
+        val_accuracy = val_corrects.double() / len(val_loader.dataset)
+
+        wandb.log({"val_loss": val_loss, "val_accuracy": val_accuracy})
+
+        # Early stopping and model checkpointing
+        if val_loss < best_val_loss:
+            torch.save(model.state_dict(), model_save_path)
+            best_val_loss = val_loss
+            early_stop_counter = 0  # Reset the counter
+        else:
+            early_stop_counter += 1
+            if early_stop_counter >= patience:
+                print("Early stopping triggered.")
+                break
+
+class Basic3DCNN(nn.Module):
+    def __init__(self):
+        super(Basic3DCNN, self).__init__()
+        self.conv1 = nn.Conv3d(in_channels=3, out_channels=30, kernel_size=(3, 3, 3), padding=1)  # (100, 320, 180)
+        self.conv2 = nn.Conv3d(30, 30, kernel_size=(3, 3, 3), padding=1)  # stride 2 reduces dimensions by half (50, 160, 90)
+        self.conv3 = nn.Conv3d(in_channels=30, out_channels=60, kernel_size=(3, 3, 3), padding=1)
+        self.conv4 = nn.Conv3d(60, 60, kernel_size=(3, 3, 3), padding=1)  # (25, 80, 45)
+        self.conv5 = nn.Conv3d(in_channels=60, out_channels=120, kernel_size=(3, 3, 3), padding=1)
+        self.conv6 = nn.Conv3d(120, 120, kernel_size=(3, 3, 3), padding=1)  # (12, 40, 22.5 = 22)
+        self.conv7 = nn.Conv3d(in_channels=120, out_channels=240, kernel_size=(3, 3, 3), padding=1)
+        self.conv8 = nn.Conv3d(240, 240, kernel_size=(3, 3, 3), padding=1)  # (6, 20, 11)
+        self.pool = nn.MaxPool3d(kernel_size=2, stride=2)  # (3, 10, 5)
+        self.dropout = nn.Dropout3d(0.3)
+        self.fc = nn.Linear(316800, 2)
+        # d5e3c7 * 3 * 10 * 5  = 36000 but it says its value above? batch size makes a difference
+    
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+        x = self.pool(x)
+        x = F.relu(self.conv3(x))
+        x = F.relu(self.conv4(x))
+        x = self.pool(x)
+        x = F.relu(self.conv5(x))
+        x = F.relu(self.conv6(x))
+        x = self.pool(x)
+        x = F.relu(self.conv7(x))
+        x = F.relu(self.conv8(x))
+        x = self.pool(x)
+        # x = x.flatten(start_dim=1)
+        x = x.view(-1,316800)
+        x = self.dropout(x)
+        x = self.fc(x)
+        return x
+
 # -------------------------------------------------------------------------------- #
 #                                                                                  #
 #                               Main Function                                      #
@@ -112,34 +246,31 @@ class BreathingDataset(Dataset):
 # -------------------------------------------------------------------------------- #
 
 def main():
-    start_time = datetime.now()
-
-    print("Initializing dataset and data loader ...")
-
     transform = transforms.Compose([
         transforms.Resize((180, 320)),
         transforms.ToTensor(),
     ])
 
-    train_dataset_without_blankets = BreathingDataset('/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Train', blanket_condition='Without Blankets', distance=None, transform=transform)
-    val_dataset_without_blankets = BreathingDataset('/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Validation', blanket_condition='Without Blankets', distance=None, transform=transform)
-    test_dataset_without_blankets = BreathingDataset('/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Test', blanket_condition='Without Blankets', distance=None, transform=transform)
+    train_path = "E:/rgb/Train"
+    val_path = "E:/rgb/Validation"
+    test_path = "E:/rgb/Test"
 
-    train_loader = DataLoader(train_dataset_without_blankets, batch_size=1, shuffle=True)  # Shuffle for training - this shuffles the samples (i.e. sets of frames, rather than individual frames.)
-    val_loader = DataLoader(val_dataset_without_blankets, batch_size=1, shuffle=False)  # No shuffle for validation
-    test_loader = DataLoader(test_dataset_without_blankets, batch_size=1, shuffle=False)  # No shuffle for testing
+    train_loader, val_loader, test_loader = initialize_dataset_and_loader(train_path, val_path, test_path, transform)
 
-    dataset_loader_end_time = datetime.now()
-    delta = dataset_loader_end_time - start_time
-    formatted_time = str(delta).split('.')[0]
+    # model instantiation
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = Basic3DCNN()
+    model.to(device)
 
-    print("len train_dataset_without_blankets =", len(train_dataset_without_blankets.samples))
-
-    print("Time taken to finish loading dataset: ", formatted_time)
-
-    print("Starting training...")
-    
-    print("Training complete.")
+    train_model(
+        model=model,
+        train_loader=train_loader,
+        val_loader=val_loader,
+        num_epochs=10,
+        model_save_path='E:/best_model/3d_cnn.pth',
+        patience=3,
+        device=device
+    )
 
 if __name__ == "__main__":
     main()
