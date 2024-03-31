@@ -11,5 +11,5 @@
 
 source /home/christian.valdez/software/miniconda3/etc/profile.d/conda.sh
 conda activate calgary_di
-python "/home/christian.valdez/DI-Automated-Scripts/core/3d_cnn.py"
+python /home/christian.valdez/DI-Automated-Scripts/core/3d_cnn.py --test
 conda deactivate
