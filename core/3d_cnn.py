@@ -350,12 +350,14 @@ def main(args):
         )
     
     if args.test:
-        test_model(
+        test_loss, test_accuracy, true_labels, predicted_probabilities = test_model(
             model=model,
             test_loader=test_loader,
             model_save_path=model_save_path,
             device=device
         )
+
+        print(f"test_loss: {test_loss}. test_accuracy: {test_accuracy}")
 
 
 if __name__ == "__main__":
