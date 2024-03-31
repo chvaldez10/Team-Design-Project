@@ -1,3 +1,33 @@
+"""
+This script is designed for training and testing a 3D Convolutional Neural Network (CNN) model
+for image recognition tasks.
+
+Command-Line Options:
+  --train : Train the model using the training and validation datasets. This will also save the 
+            trained model to a specified path. If this option is selected, the script will perform
+            training operations including model training and validation.
+
+  --test  : Test the model using the test dataset. This option requires that a trained model is
+            available and specified in the script. If this option is selected, the script will
+            perform testing operations and output the performance metrics of the model on the test dataset.
+
+Both options can be used together to first train the model and then test it without needing to run
+the script twice. If no option is specified, the script will not perform any operations.
+
+Examples:
+  To train the model:
+  python your_script_name.py --train
+
+  To test the model:
+  python your_script_name.py --test
+
+  To train and then test the model:
+  python your_script_name.py --train --test
+
+Note: Ensure that the dataset paths, model save path, and any other configurations are correctly
+set within the script before running it.
+"""
+
 import re
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -134,7 +164,42 @@ def initialize_dataset_and_loader(train_path: str, val_path: str, test_path: str
 
     return train_loader, val_loader, test_loader
 
-def train_model(model, train_loader: DataLoader, val_loader: DataLoader, num_epochs: int, model_save_path: str, patience: int, device: torch.device):
+class Basic3DCNN(nn.Module):
+    def __init__(self):
+        super(Basic3DCNN, self).__init__()
+        self.conv1 = nn.Conv3d(in_channels=3, out_channels=30, kernel_size=(3, 3, 3), padding=1)  # (100, 320, 180)
+        self.conv2 = nn.Conv3d(30, 30, kernel_size=(3, 3, 3), padding=1)  # stride 2 reduces dimensions by half (50, 160, 90)
+        self.conv3 = nn.Conv3d(in_channels=30, out_channels=60, kernel_size=(3, 3, 3), padding=1)
+        self.conv4 = nn.Conv3d(60, 60, kernel_size=(3, 3, 3), padding=1)  # (25, 80, 45)
+        self.conv5 = nn.Conv3d(in_channels=60, out_channels=120, kernel_size=(3, 3, 3), padding=1)
+        self.conv6 = nn.Conv3d(120, 120, kernel_size=(3, 3, 3), padding=1)  # (12, 40, 22.5 = 22)
+        self.conv7 = nn.Conv3d(in_channels=120, out_channels=240, kernel_size=(3, 3, 3), padding=1)
+        self.conv8 = nn.Conv3d(240, 240, kernel_size=(3, 3, 3), padding=1)  # (6, 20, 11)
+        self.pool = nn.MaxPool3d(kernel_size=2, stride=2)  # (3, 10, 5)
+        self.dropout = nn.Dropout3d(0.3)
+        self.fc = nn.Linear(316800, 2)
+        # d5e3c7 * 3 * 10 * 5  = 36000 but it says its value above? batch size makes a difference
+    
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+        x = self.pool(x)
+        x = F.relu(self.conv3(x))
+        x = F.relu(self.conv4(x))
+        x = self.pool(x)
+        x = F.relu(self.conv5(x))
+        x = F.relu(self.conv6(x))
+        x = self.pool(x)
+        x = F.relu(self.conv7(x))
+        x = F.relu(self.conv8(x))
+        x = self.pool(x)
+        # x = x.flatten(start_dim=1)
+        x = x.view(-1,316800)
+        # x = self.dropout(x)
+        x = self.fc(x)
+        return x
+
+def train_model(model: Basic3DCNN, train_loader: DataLoader, val_loader: DataLoader, num_epochs: int, model_save_path: str, patience: int, device: torch.device):
     """
     Trains a given model with specified parameters and data loaders, ensuring all data is moved to the specified device.
     """
@@ -204,40 +269,46 @@ def train_model(model, train_loader: DataLoader, val_loader: DataLoader, num_epo
                 print("Early stopping triggered.")
                 break
 
-class Basic3DCNN(nn.Module):
-    def __init__(self):
-        super(Basic3DCNN, self).__init__()
-        self.conv1 = nn.Conv3d(in_channels=3, out_channels=30, kernel_size=(3, 3, 3), padding=1)  # (100, 320, 180)
-        self.conv2 = nn.Conv3d(30, 30, kernel_size=(3, 3, 3), padding=1)  # stride 2 reduces dimensions by half (50, 160, 90)
-        self.conv3 = nn.Conv3d(in_channels=30, out_channels=60, kernel_size=(3, 3, 3), padding=1)
-        self.conv4 = nn.Conv3d(60, 60, kernel_size=(3, 3, 3), padding=1)  # (25, 80, 45)
-        self.conv5 = nn.Conv3d(in_channels=60, out_channels=120, kernel_size=(3, 3, 3), padding=1)
-        self.conv6 = nn.Conv3d(120, 120, kernel_size=(3, 3, 3), padding=1)  # (12, 40, 22.5 = 22)
-        self.conv7 = nn.Conv3d(in_channels=120, out_channels=240, kernel_size=(3, 3, 3), padding=1)
-        self.conv8 = nn.Conv3d(240, 240, kernel_size=(3, 3, 3), padding=1)  # (6, 20, 11)
-        self.pool = nn.MaxPool3d(kernel_size=2, stride=2)  # (3, 10, 5)
-        self.dropout = nn.Dropout3d(0.3)
-        self.fc = nn.Linear(316800, 2)
-        # d5e3c7 * 3 * 10 * 5  = 36000 but it says its value above? batch size makes a difference
+def test_model(model: Basic3DCNN, test_loader: DataLoader, model_save_path: str, device: torch.device):
+    """
+    Test the model with the given test data loader and criterion.
+    """
+    # Load the best model for testing
+    model.load_state_dict(torch.load(model_save_path))
+
+    # Testing Phase
+    model.eval()  # Set model to evaluation mode
+    criterion = nn.CrossEntropyLoss()
+    test_loss = 0.0
+    test_corrects = 0
     
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        x = F.relu(self.conv2(x))
-        x = self.pool(x)
-        x = F.relu(self.conv3(x))
-        x = F.relu(self.conv4(x))
-        x = self.pool(x)
-        x = F.relu(self.conv5(x))
-        x = F.relu(self.conv6(x))
-        x = self.pool(x)
-        x = F.relu(self.conv7(x))
-        x = F.relu(self.conv8(x))
-        x = self.pool(x)
-        # x = x.flatten(start_dim=1)
-        x = x.view(-1,316800)
-        # x = self.dropout(x)
-        x = self.fc(x)
-        return x
+    # Initialize list to store true labels and predicted probabilities
+    true_labels = []
+    predicted_probabilities = []
+
+    with torch.no_grad():
+        for inputs, labels in test_loader:
+            inputs = inputs.permute(0, 2, 1, 3, 4)  # Adjust dimensions if necessary
+            inputs, labels = inputs.to(device), labels.to(device)
+            
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            test_loss += loss.item()
+
+            # Get Predicted probabilities and true labels
+            probabilities = torch.sigmoid(outputs)
+            predicted_probabilities.extend(probabilities[:,1].cpu().numpy())
+            true_labels.extend(labels.cpu().numpy())
+
+            # Calculate Correct predictions
+            _, preds = torch.max(outputs, 1)
+            test_corrects += torch.sum(preds == labels.data)
+
+    # Calculate average test loss and accuracy
+    test_loss /= len(test_loader)
+    test_accuracy = test_corrects.double() / len(test_loader.dataset)
+
+    return test_loss, test_accuracy, true_labels, predicted_probabilities
 
 # -------------------------------------------------------------------------------- #
 #                                                                                  #
