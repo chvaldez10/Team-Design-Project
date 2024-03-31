@@ -30,6 +30,7 @@ set within the script before running it.
 
 import re
 import torch
+import argparse
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 import torch.optim as optim
@@ -273,10 +274,8 @@ def test_model(model: Basic3DCNN, test_loader: DataLoader, model_save_path: str,
     """
     Test the model with the given test data loader and criterion.
     """
-    # Load the best model for testing
     model.load_state_dict(torch.load(model_save_path))
 
-    # Testing Phase
     model.eval()  # Set model to evaluation mode
     criterion = nn.CrossEntropyLoss()
     test_loss = 0.0
@@ -316,32 +315,55 @@ def test_model(model: Basic3DCNN, test_loader: DataLoader, model_save_path: str,
 #                                                                                  #
 # -------------------------------------------------------------------------------- #
 
-def main():
+def main(args):
+    # Define transformations
     transform = transforms.Compose([
         transforms.Resize((180, 320)),
         transforms.ToTensor(),
     ])
 
+    # Paths to the dataset
     train_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Train"
     val_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Validation"
     test_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Test"
+    model_save_path = "/home/christian.valdez/DI-Automated-Scripts/best_model/3d_cnn.pth"
 
+    # Initialize dataset and loader
     train_loader, val_loader, test_loader = initialize_dataset_and_loader(train_path, val_path, test_path, transform)
 
-    # model instantiation
+    # Device configuration
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Model instantiation
     model = Basic3DCNN()
     model.to(device)
 
-    train_model(
-        model=model,
-        train_loader=train_loader,
-        val_loader=val_loader,
-        num_epochs=10,
-        model_save_path='/home/christian.valdez/DI-Automated-Scripts/best_model/3d_cnn.pth',
-        patience=3,
-        device=device
-    )
+    if args.train:
+        train_model(
+            model=model,
+            train_loader=train_loader,
+            val_loader=val_loader,
+            num_epochs=10,
+            model_save_path=model_save_path,
+            patience=3,
+            device=device
+        )
+    
+    if args.test:
+        test_model(
+            model=model,
+            test_loader=test_loader,
+            model_save_path=model_save_path,
+            device=device
+        )
+
 
 if __name__ == "__main__":
-    main()
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description='Train and/or test a 3D CNN model.')
+    parser.add_argument('--train', action='store_true', help='Train the model')
+    parser.add_argument('--test', action='store_true', help='Test the model')
+    args = parser.parse_args()
+
+    # Call the main function with parsed arguments
+    main(args)
