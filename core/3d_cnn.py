@@ -326,7 +326,7 @@ def main(args):
     train_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Train"
     val_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Validation"
     test_path = "/work/TALC/enel645_2024w/design_project_yene/rgb_10-fps/Test"
-    model_save_path = "/home/christian.valdez/DI-Automated-Scripts/best_model/3d_cnn.pth"
+    model_save_path = "/home/christian.valdez/DI-Automated-Scripts/best_model/3d_cnn-with-dropout.pth"
 
     # Initialize dataset and loader
     train_loader, val_loader, test_loader = initialize_dataset_and_loader(train_path, val_path, test_path, transform)
