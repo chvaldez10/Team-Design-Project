@@ -63,10 +63,11 @@ coverage.xml
 .DS_Store
 Thumbs.db
 
-# metadata
+# logs
 *.log
 *.xlsx
 *.json
+*.out 
 
 # Database
 *.sqlite
